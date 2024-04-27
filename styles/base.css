@@ -1,0 +1,166 @@
+
+:root {
+    --primary-color: #2f0020;
+    --secondary-color: #062A00;
+    --accent1-color: #FF00AE;
+    --accent2-color: #1EDE01;
+    --accent3-color: #FBF8F8;
+} 
+
+body {
+    margin: 0;
+    font-size: 12px;
+}
+#home-content {
+    background-color: var(--primary-color);
+}
+h2, h3, h4, header, main, footer {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid rgba(0, 0, 0,  0.5);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5 {
+    color: var(--accent2-color);
+}
+p {
+    color: var(--accent3-color);
+    font-family: "Schibsted Grotesk", sans-serif;
+}
+a {
+    font-family: "Schibsted Grotesk", sans-serif;
+    /* color: var(--accent3-color); */
+    /* text-decoration: none; */
+}
+
+header {
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+header img {
+    width: 100%;
+}
+.my-name {
+    font-family: "Montserrat", sans-serif;
+    color: var(--accent3-color);
+    font-size: 2.5em;
+    text-align: center;
+}
+
+nav {
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+}
+nav ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--accent2-color);
+    text-decoration: none;
+    padding: 1rem 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.active {
+    color: var(--accent3-color);
+    background-color: var(--accent1-color);
+}
+
+nav a:hover {
+    background-color: var(--accent1-color);
+    color: var(--accent3-color)
+}
+
+main {
+    display: block;
+    align-items: center;
+    background-color: var(--accent3-color);
+}
+main h1 {
+    color: var(--primary-color);
+    grid-column: 1/3;
+    font-size: 1.8em;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 1rem 0 1rem 0;
+}
+
+section {
+    border: 1px solid var(--primary-color);
+    margin: 10px 0;
+    border-radius: 10px 10px 0 0;
+}
+section h2 {
+    background-color: var(--primary-color);
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+section ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0 1rem;
+}
+section ul li {
+    margin: 1rem 0;
+}
+section ul li a {
+    font-weight: bold;
+}
+section ul li .week {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+#second-section #information {
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+#second-section #information p {
+    color: var(--primary-color);
+}
+
+footer {
+    text-align: center;
+}
+footer .year-and-copy{
+    display: block;
+}
+footer .footer-country {
+    height: max-content;
+    display: block;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid white; */
+}
+footer #country-name {
+    display: inline;
+    padding: 0;
+    position: relative;
+    bottom: 10px;
+}
+footer img {
+    width: 50px;
+    align-self: flex-start;
+    margin: 1px 0;
+}
