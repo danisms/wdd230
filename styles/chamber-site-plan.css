@@ -128,3 +128,10 @@ body {
     padding: 1rem;
   }
 
+  #site-wireframes {
+    text-align: center;
+  }
+  #site-wireframes img {
+    width: 60%;
+  }
+
