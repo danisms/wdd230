@@ -7,6 +7,8 @@ addBtn.addEventListener('click', () => {
     if (userInput.value != "") {
         // create a list element
         const newList = document.createElement('li');
+        // capitalize the value of the list using a css style rule
+        newList.style.textTransform = 'capitalize';
         // create a button element and set it properties
         const delBtn = document.createElement('button')
         delBtn.setAttribute('class', 'del-btn');
