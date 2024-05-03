@@ -2,7 +2,7 @@
     :root {
         --primary-color: #2f0020;
         --secondary-color: #062A00;
-        --accent1-color: #C10084;
+        --accent1-color: #a80073;
         --accent2-color: #1EDE01;
         --accent3-color: #FBF8F8;
     } 
@@ -97,6 +97,11 @@
     nav a:hover {
         background-color: var(--accent1-color);
         color: var(--accent3-color)
+    }
+
+    /* hide hamburger btn */
+    #menu {
+        display: none;
     }
 
     main {

@@ -2,7 +2,7 @@
 :root {
     --primary-color: #2f0020;
     --secondary-color: #062A00;
-    --accent1-color: #C10084;
+    --accent1-color: #910063;
     --accent2-color: #1EDE01;
     --accent3-color: #FBF8F8;
 } 
@@ -32,6 +32,18 @@ a {
     font-family: "Schibsted Grotesk", sans-serif;
     /* color: var(--accent3-color); */
     /* text-decoration: none; */
+}
+
+#theme-mode {
+    width: 1.5rem;
+    height: 3rem;
+    position: absolute;
+    right: 1rem;
+    top: 0.3rem;
+    border: 1px solid var(--accent3-color);
+    border-radius: 15px;
+    cursor: pointer;
+    /* box-shadow: .2rem .2rem .5rem rgb(0, 0, 0); */
 }
 
 header {
@@ -66,7 +78,7 @@ nav ul li {
 }
 
 nav a {
-    display: block;
+    display: none;
     text-decoration: none;
     color: var(--accent2-color);
     text-decoration: none;
@@ -84,6 +96,31 @@ nav a {
 nav a:hover {
     background-color: var(--accent1-color);
     color: var(--accent3-color)
+}
+
+/* hamburger menu button */
+#menu {
+    font-size: 2rem;
+    border: 0;
+    background: none;
+    color: var(--accent3-color);
+    position: relative;
+    display: block;
+    /* right: 1rem;
+    top: 0.3rem; */
+    padding: 0.5rem 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "⨉";
+}
+
+.open a {
+    display: block;
 }
 
 main {
