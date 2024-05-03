@@ -99,6 +99,9 @@ nav a:hover {
 }
 
 /* hamburger menu button */
+#menu-btn-content {
+    display: none;
+}
 #menu {
     font-size: 2rem;
     border: 0;
