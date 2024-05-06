@@ -10,6 +10,7 @@
     --accent-one: #ff9100;
     --accent-two: #5ADBFF;
     --accent-three: #f8f9fd;
+    --accent-four: rgb(236, 241, 255);
 
     /* Major Fonts */
     --heading-font-one: "Lugrasimo", cursive;
@@ -28,17 +29,18 @@
     --nav-hover-background-color: var(--secondary-color);
 }
 
-* {
+/* * {
     border: 1px solid black;
-}
+} */
 
 body {
     max-width: 1600px;
     margin: 0 auto;
     /* padding: 2em; */
-    font-size: 14px;
+    font-size: 16px;
     /* text-align: center; */
     overflow: auto;
+    /* background-color: var(--accent-four); */
 }
 .overflow {
     overflow: hidden;
@@ -60,6 +62,8 @@ header {
     text-align: center;
     color: var(--headline-color-on-color);
     background-color: var(--primary-color);
+    box-sizing: border-box;
+    overflow: hidden;
 }
 img {
     display: block;
@@ -72,7 +76,7 @@ h2, h3, h4, h5, h6 {
 }
 h1 {
     font-family: var(--heading-font-one);
-    color: var(--headline-color-on-white);
+    color: var(--headline-color-on-color);
     text-shadow: 1px 1px 1px var(--accent-two);
     font-size: 2em;
 }
@@ -104,7 +108,7 @@ section {
 
 p {
     font-family: var(--paragraph-font);
-    font-size: 0.8em;
+    font-size: 1em;
     color: var(--paragraph-color-on-white);
     margin: 0;
 }
@@ -284,7 +288,7 @@ button:active {
         justify-items: center;
     }
     header img {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         grid-column: 1/2;
         grid-row: 1/2;
@@ -352,6 +356,22 @@ button:active {
         white-space: nowrap;
     }
 
+    .control-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 1rem;
+        box-sizing: border-box;
+    }
+    .count {
+        align-content: center;
+        margin: 0 1rem;
+        font-size: 1.2em;
+        font-weight: bold;
+        font-family: var(--heading-font-two);
+    }
+
     /* WHAT WE DO */
     main #card-1 {
         display: grid;
@@ -373,9 +393,8 @@ button:active {
         margin: 0;
     }
     .card-we-do {
-        width: 80%;
+        width: 100%;
         height: auto;
-        margin: 0 1rem;
         display: inline-block;
         box-sizing: border-box;
         white-space: wrap;
@@ -403,7 +422,7 @@ button:active {
         transition: scrollX 2s;
     }
     main #card-2 #scroll-layer-2 .event-box {
-        width: 30.5%;
+        width: 90%;
         height: auto;
         margin: 0 1rem;
         display: inline-block;
@@ -439,17 +458,6 @@ button:active {
         padding: 1rem;
     }
 
-    #card-2 #event-control-box {
-        margin-top: 1rem;
-        box-sizing: border-box;
-    }
-
-    #event-count {
-        font-size: 1.2em;
-        font-weight: bold;
-        font-family: var(--heading-font-two);
-    }
-
     /* SPORT LIGHT SECTION */
     main #card-3 #spotlight {
         display: grid;
@@ -460,15 +468,10 @@ button:active {
     }
 
     #spotlight #advertisement-box{
-        grid-column: 1/3;
+        grid-column: 1/4;
         grid-row: 1/2;
         display: grid;
-        transition: opacity 1.5s;
-    }
-    #spotlight #advertisement-box:hover {
-        z-index: 1;
-        animation-name: make-visual;
-        animation-duration: 0.5s;
+        opacity: 1;
     }
     #advertisement-box img {
         grid-column: 1/2;
@@ -478,8 +481,7 @@ button:active {
     #advertisement-box section {
         grid-column: 1/2;
         grid-row: 1/2;
-        opacity: 0.8;
-        transition: opacity 0.5s;
+        opacity: 1;
         align-self: last baseline;
     }
     #advertisement h3{
@@ -487,10 +489,11 @@ button:active {
     }
     
     #spotlight video {
-        grid-column: 2/4;
+        /* grid-column: 2/4;
         grid-row: 1/2;
         width: 100%;
-        align-self: center;
+        align-self: center; */
+        display: none;
     }
 
     /* WEATHER INFO */
@@ -515,18 +518,12 @@ button:active {
     /* FOOTER */
     footer {
         display: grid;
-        grid-template-columns: 100px 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
         justify-content: center;
         text-align: center;
-        padding: 1rem;
-        align-items: center;
     }
     footer img {
         width: 100px;
         height: 100px;
-        grid-column: 1/2;
-        grid-row: 1/5;
     }
     footer #footer-contact {
         display: flex;
@@ -534,27 +531,16 @@ button:active {
         /* width: 15%; */
         justify-content: space-between;
         justify-content: center;
-        grid-column: 2/3;
-        grid-row: 1/2;
     }
     footer #footer-contact a {
         margin: 0 1rem;
-        align-content: center;
     }
     footer #footer-contact a img {
         width: 25px;
         height: 25px;
     }
-
-    footer h4 {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
     footer #copyright-box {
         word-spacing: 0.4rem;
-        grid-column: 2/3;
-        grid-row: 3/4;
     }
 }
 

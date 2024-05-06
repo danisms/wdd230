@@ -49,51 +49,172 @@ window.addEventListener("scroll", () => {
     }
 })
 
-// get card2 scroll and set scroll to button
-const card2ScrollLayer = document.getElementById('scroll-layer-2');
-const scrollEventLeftBtn = document.getElementById('event-left-btn');
-const scrollEventRightBtn = document.getElementById('event-right-btn');
-const scrollCount = document.getElementById('event-count');
-const allEventClass = document.querySelectorAll('.event-box');
+// SCROLL FUNCTIONS
+// returns the total number of boxes present for scrolling both visible and not visible
+function getNumberOfScrolls(boxClass) {
+    const allEventClass = document.querySelectorAll(boxClass);
+    let scrollElements = 0;
+    allEventClass.forEach(() => {
+        scrollElements += 1;
+    })
 
-let scrollWidth = 0;
-let scrollElements = 0;
-allEventClass.forEach(() => {
-    scrollElements += 1;
-})
-// get initial number of scroll elements
-const initialScrollElements = scrollElements;
-// get the number of hidden elements to scroll out
-const numOfVisibleElements = 3
-scrollElements = scrollElements - numOfVisibleElements;
-const scrollMax = scrollElements;
-// set scroll element value to zero;
-scrollElements = 0;
-// set scroll count values
-function setScrollCount(initial, visible, scrolled) {
+    return scrollElements;
+}
+
+// set the number of scrolled by the total number of boxes scrollable.
+function setScrollCount(initial, visible, scrolled, scrollCount) {
     scrollCount.innerHTML = `${visible + scrolled}/${initial}`;
 }
 
-setScrollCount(initialScrollElements, numOfVisibleElements, scrollElements);
-
-let scrollLength = 440;
-scrollEventRightBtn.addEventListener("click", () => {
-    if (scrollElements < scrollMax) {
-        scrollElements += 1;
-        scrollWidth += scrollLength;
-        current_x_scroll_pos = card2ScrollLayer.scrollTo(scrollWidth, 0);
-        setScrollCount(initialScrollElements, numOfVisibleElements, scrollElements);
+// scroll the elements to  display as required
+function scroll(scrollBox, scrollElements, visibleElements, scrollMax, initialScrollElements, scrollLayer, scrollWidth, scrollCountElement, right=true) {
+    
+    if (right) {
+        if (scrollElements < scrollMax) {
+            scrollElements += 1;
+            scrollWidth += scrollBox;
+            current_x_scroll_pos = scrollLayer.scrollTo(scrollWidth, 0);
+            setScrollCount(initialScrollElements, visibleElements, scrollElements, scrollCountElement);
+        }
+    }else {
+        if (scrollElements > 0) {
+            scrollElements -= 1;
+            scrollWidth -= scrollBox;
+            current_x_scroll_pos = scrollLayer.scrollTo(scrollWidth, 0);
+            setScrollCount(initialScrollElements, visibleElements, scrollElements, scrollCountElement);
+        }
     }
-})
 
-scrollEventLeftBtn.addEventListener("click", ()=> {
-    if (scrollElements > 0) {
-        scrollElements -= 1;
-        scrollWidth -= scrollLength;
-        current_x_scroll_pos = card2ScrollLayer.scrollTo(scrollWidth, 0);
-        setScrollCount(initialScrollElements, numOfVisibleElements, scrollElements);
+    return [scrollElements, scrollWidth];
+}
+
+// set the visible elements and number of visible elements
+function setNumOfVisibleElements(classElement) {
+    let NumOfVisibleElements = 0;
+    let allElements = document.querySelectorAll(classElement);
+    console.log(parseInt(window.innerWidth));
+    if (parseInt(window.offsetWidth) >= 890) {
+        allElements.forEach((element)=> {
+            element.style.width = '30.5%;';
+        });
+        NumOfVisibleElements = 3;
+    }else if(parseInt(window.innerWidth) >= 690) {
+        allElements.forEach((element) => {
+            element.style.width = '50%';
+        })
+        NumOfVisibleElements = 2;
+    }else {
+        allElements.forEach((element)=> {
+            element.style.width = '90%';
+        })
+        NumOfVisibleElements = 1;
     }
-})
+    return NumOfVisibleElements;
+}
+
+// get Elements for what we do section scroll (phone version)
+const weDoScrollLayer = document.querySelector('#scroll-layer-1');
+const weDoRightBtn = document.querySelector('#we-do-right-btn');
+const weDoLeftBtn = document.querySelector('#we-do-left-btn');
+const aWeDoBox = document.querySelector('#a-we-do-box');
+
+// ge element scroll and set scroll to button
+let weDoScrollElements = getNumberOfScrolls('.card-we-do');
+
+// get initial number of scroll elements
+const weDoInitialScrollElements = weDoScrollElements;
+// console.log(weDoScrollElements);  // for testing purpose
+
+// get the number of hidden elements to scroll out
+let weDoNumOfVisibleElements = 1;
+if (window.innerWidth < 890) {
+    weDoNumOfVisibleElements = setNumOfVisibleElements('.card-we-do');
+}
+const weDoScrollMax = weDoScrollElements - weDoNumOfVisibleElements;
+
+// set scroll element value to zero;
+weDoScrollElements = 0;
+
+// set scroll count values
+const weDoScrollCount = document.querySelector('#we-do-count');
+let weDoScrollWidth = 0;
+let weDoScrollBox = aWeDoBox.offsetWidth;
+
+setScrollCount(weDoInitialScrollElements, weDoNumOfVisibleElements, weDoScrollElements, weDoScrollCount);
+// set right button click
+weDoRightBtn.addEventListener('click', () => {
+    // Note: scroll function returns a list of [scrollElements, scrollWidth]
+    let scrollList = scroll(weDoScrollBox, weDoScrollElements, weDoNumOfVisibleElements, weDoScrollMax, weDoInitialScrollElements, weDoScrollLayer, weDoScrollWidth, weDoScrollCount, true);
+    weDoScrollElements = scrollList[0];
+    weDoScrollWidth = scrollList[1];
+    // console.log(weDoScrollWidth);  // for testing purpose
+});
+
+// set left button click
+weDoLeftBtn.addEventListener('click', () => {
+    let scrollList = scroll(weDoScrollBox, weDoScrollElements, weDoNumOfVisibleElements, weDoScrollMax, weDoInitialScrollElements, weDoScrollLayer, weDoScrollWidth, weDoScrollCount, false);
+    weDoScrollElements = scrollList[0];
+    weDoScrollWidth = scrollList[1];
+    // console.log(weDoScrollWidth);  // for testing purpose    
+});
+
+
+// SET Scrolling for event-box layers
+// get Elements
+const eventScrollLayer = document.querySelector('#scroll-layer-2');
+const eventRightBtn = document.querySelector('#event-right-btn');
+const eventLeftBtn = document.querySelector('#event-left-btn');
+const aEventBox = document.querySelector('#an-event-box');
+
+// ge element scroll and set scroll to button
+let eventScrollElements = getNumberOfScrolls('.event-box');
+
+// get initial number of scroll elements
+const eventInitialScrollElements = eventScrollElements;
+// console.log(weDoScrollElements);  // for testing purpose
+
+// get the number of hidden elements to scroll out
+let eventNumOfVisibleElements = 3;
+if (window.innerWidth < 890) {
+    eventNumOfVisibleElements = setNumOfVisibleElements('.event-box');
+}
+
+const eventScrollMax = eventScrollElements - eventNumOfVisibleElements;
+
+// set scroll element value to zero;
+eventScrollElements = 0;
+
+// set scroll count values
+const eventScrollCount = document.querySelector('#event-count');
+let eventScrollWidth = 0;
+// set scroll width
+let eventScrollBox = 0;
+if (window.innerWidth >= 890) {
+    eventScrollBox = 500;
+}else if(window.innerWidth >= 700) {
+    eventScrollBox = 400;
+}else {
+    eventScrollBox = 305;
+}
+
+setScrollCount(eventInitialScrollElements, eventNumOfVisibleElements, eventScrollElements, eventScrollCount);
+// set right button click
+eventRightBtn.addEventListener('click', () => {
+    // Note: scroll function returns a list of [scrollElements, scrollWidth]
+    let scrollList = scroll(eventScrollBox, eventScrollElements, eventNumOfVisibleElements, eventScrollMax, eventInitialScrollElements, eventScrollLayer, eventScrollWidth, eventScrollCount, true);
+    eventScrollElements = scrollList[0];
+    eventScrollWidth = scrollList[1];
+    // console.log(weDoScrollWidth);  // for testing purpose
+});
+
+// set left button click
+eventLeftBtn.addEventListener('click', () => {
+    // Note: scroll function returns a list of [scrollElements, scrollWidth]
+    let scrollList = scroll(eventScrollBox, eventScrollElements, eventNumOfVisibleElements, eventScrollMax, eventInitialScrollElements, eventScrollLayer, eventScrollWidth, eventScrollCount, false);
+    eventScrollElements = scrollList[0];
+    eventScrollWidth = scrollList[1];
+    // console.log(weDoScrollWidth);  // for testing purpose
+});
 
 // Event Description Display Handler
 let randomNum = 0;
