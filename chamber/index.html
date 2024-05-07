@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +18,24 @@
     <!-- Optional Non-Essential, But Required for Analytics -->
     <!-- <meta property="fb:app_id" content="[your_app_id]"> -->
     <!-- <meta name="twitter:site" content="[@website-username]"> -->
+    <!-- Using Fonts-->
+    <!-- Font 1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Font 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Font 3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <!-- CSS Links -->
     <link rel="stylesheet" href="styles/normalize.css" type="text/css">
     <link rel="stylesheet" href="styles/base.css" type="text/css">
     <link rel="stylesheet" href="styles/large.css" type="text/css">
     <!-- Add fonts here -->
-    <!-- Using CSS Fonts-->
     <!-- Site Icon -->
     <link rel="icon" href="favicon.ico">
     <title>Benin Hotel Chamber of Commerce</title>
@@ -46,146 +58,162 @@
             <img src="images/hotel-banner.webp" alt="homepage banner hotel image">
             <div id="header-overlay" class="overlay"></div>
             <div id="header-intro">
-                <h1>Benin Hotel Chamber of Commerce</h1>
-                <h2>Connecting Hospitality, Driving Growth</h2>
+                <h1 id="head-title">Benin Hotel Chamber of Commerce</h1>
+                <h2 id="head-motto">Connecting Hospitality, Driving Growth</h2>
                 <button id="call-to-action-btn">JOIN</button>
             </div>
         </header>
         <main>
-            <section id="card-1">
-                <h2 class="h2-headers" id="first-main-h2">What We Do</h2>
-                <div id="scroll-layer-1" class="scroll-layer">
-                    <section class="card-we-do" id="a-we-do-box">
-                        <img src="images/hotels-in-benin.png" alt="connecting hospitality">
-                        <h3>Connecting Hospitality</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fuga obcaecati, laborum doloremque, dolor provident iste excepturi ratione consequatur autem fugit minima? Asperiores eaque laborum quis officiis excepturi obcaecati aliquid!
-                        </p>
-                    </section>
-                    <section class="card-we-do">
-                        <img src="images/growth.png" alt="driving growth">
-                        <h3>Driving Growth</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fuga obcaecati, laborum doloremque, dolor provident iste excepturi ratione consequatur autem fugit minima? Asperiores eaque laborum quis officiis excepturi obcaecati aliquid!
-                        </p>
-                    </section>
-                    <section class="card-we-do">
-                        <img src="images/unity-hand-shake.jpg" alt="fostering unity">
-                        <h3>Fostering Unity</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fuga obcaecati, laborum doloremque, dolor provident iste excepturi ratione consequatur autem fugit minima? Asperiores eaque laborum quis officiis excepturi obcaecati aliquid!
-                        </p>
-                    </section>
-                </div>
-                <div id="we-do-control-box" class="control-box">
-                    <button id="we-do-left-btn" class="move-left-btn">◀</button>
-                    <span id="we-do-count" class="count">3/5</span>
-                    <button id="we-do-right-btn" class="move-right-btn">▶</button>
-                </div>
-            </section>
-            <section id="card-2">
-                <h2 class="h2-headers">Current Events</h2>
-                <div id="scroll-layer-2" class="scroll-layer">
-                    <div class="event-box" id="an-event-box">
-                        <div class="an-event-block" onmouseenter="displayDescription('des1')" onmouseleave="removeDescription('des1', '1000px')">
-                            <img src="images/current-events/WhatsApp Image 2022-01-27 at 5.44.32 PM.jpeg-1643302119462.jpeg">
-                            <section class="event-description" id="des1">
-                                <h3>Event One</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</p>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="event-box">
-                        <div class="an-event-block" onmouseenter="displayDescription('des2')" onmouseleave="removeDescription('des2', '1000px')">
-                            <img src="images/current-events/WhatsApp Image 2022-02-06 at 8.00.10 PM.jpeg-1644180176953.jpeg" alt="current event two">
-                            <section class="event-description" id="des2">
-                                <h3>Event Two</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</p>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="event-box">
-                        <div class="an-event-block" onmouseenter="displayDescription('des3')" onmouseleave="removeDescription('des3', '1000px')">
-                            <img src="images/current-events/WhatsApp Image 2022-01-27 at 5.44.33 PM.jpeg-1643302296998.jpeg" alt="current event three">
-                            <section class="event-description" id="des3">
-                                <h3>Event Three</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</p>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="event-box">
-                        <div class="an-event-block" onmouseenter="displayDescription('des4')" onmouseleave="removeDescription('des4', '1000px')">
-                            <img src="images/current-events/Throwback-Thursday-Old-School-Rap-Underground-Hip-Hop-Classics-English-2015-500x500.jpg" alt="current event four">
-                            <section class="event-description" id="des4">
-                                <h3>Event Four</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</p>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="event-box">
-                        <div class="an-event-block" onmouseover="displayDescription('des5')" onmouseleave="removeDescription('des5', '1000px')">
-                            <img src="images/current-events/A-Bigger-and-Better-Kabayan-picture.jpg" alt="current event five">
-                            <section class="event-description" id="des5">
-                                <h3>Event Five</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</p>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="event-box">
-                        <div class="an-event-block" onmouseenter="displayDescription('des6')" onmouseleave="removeDescription('des6', '1000px')">
-                            <img src="images/current-events/for-RW.jpg" alt="current event six">
-                            <section class="event-description" id="des6">
-                                <h3>Event Six</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</p>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="event-box">
-                        <div class="an-event-block" onmouseenter="displayDescription('des7')" onmouseleave="removeDescription('des7', '1000px')">
-                            <img src="images/placeholder/photo-placeholder.png" alt="current event seven">
-                            <section class="event-description" id="des7">
-                                <h3>Event Seven</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</p>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-                <div id="event-control-box" class="control-box">
-                    <button id="event-left-btn" class="move-left-btn">◀</button>
-                    <span id="event-count" class="count"></span>
-                    <button id="event-right-btn" class="move-right-btn">▶</button>
-                </div>
-            </section>
-            <section id="card-3">
-                <h2 class="h2-headers">Spotlights</h2>
-                <div id="spotlight">
-                    <div id="advertisement-box" onmouseover="changeVisibility('advertisement', '1')", onmouseleave="changeVisibility('advertisement', '0.8')">
-                        <img src="images/hotel.jpg" alt="an hotel">
-                        <section id="advertisement">
-                            <h3>Advert Description</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, unde sint! Dolor iste laudantium debitis, ex aspernatur beatae quidem officia velit et, ab modi saepe tenetur doloremque! Ullam, aspernatur numquam?</p>
+            <div id="main-overlay">
+                <section id="card-1">
+                    <h2 class="h2-headers" id="first-main-h2">What We Do</h2>
+                    <div id="scroll-layer-1" class="scroll-layer">
+                        <section class="card-we-do" id="a-we-do-box">
+                            <img src="images/hotels-in-benin.png" alt="connecting hospitality">
+                            <h3>Connecting Hospitality</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fuga obcaecati, laborum doloremque, dolor provident iste excepturi ratione consequatur autem fugit minima? Asperiores eaque laborum quis officiis excepturi obcaecati aliquid!
+                            </p>
+                        </section>
+                        <section class="card-we-do">
+                            <img src="images/growth.png" alt="driving growth">
+                            <h3>Driving Growth</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fuga obcaecati, laborum doloremque, dolor provident iste excepturi ratione consequatur autem fugit minima? Asperiores eaque laborum quis officiis excepturi obcaecati aliquid!
+                            </p>
+                        </section>
+                        <section class="card-we-do">
+                            <img src="images/unity-hand-shake.jpg" alt="fostering unity">
+                            <h3>Fostering Unity</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fuga obcaecati, laborum doloremque, dolor provident iste excepturi ratione consequatur autem fugit minima? Asperiores eaque laborum quis officiis excepturi obcaecati aliquid!
+                            </p>
                         </section>
                     </div>
-                    <video src="video/advert/hotel-interior-sample.mp4" controls></video>
-                </div>
-            </section>
-            <section id="card-4">
-                <h2 class="h2-headers">Weather Info</h2>
-                <div id="info-graph">
-                    <div id="area-box">Area: <span id="area" class="weather-info">Nigeria, Benin</span></div> 
-                    <div id="weather-box">Weather: <span id="weather">☪️</span> - <span id="temp" class="weather-info">32℃</span></div>
-                    <div id="time-box">Time: <span id="time" class="weather-info">5/6/2024 - 06:11am</span> - <span id="time-description" class="weather-info">Morning</span></div>
-                </div>
-            </section>
+                    <div id="we-do-control-box" class="control-box">
+                        <button id="we-do-left-btn" class="move-left-btn">◀</button>
+                        <span id="we-do-count" class="count">3/5</span>
+                        <button id="we-do-right-btn" class="move-right-btn">▶</button>
+                    </div>
+                </section>
+                <section id="card-2">
+                    <h2 class="h2-headers">Current Events</h2>
+                    <div id="scroll-layer-2" class="scroll-layer">
+                        <div class="event-box" id="an-event-box">
+                            <div class="an-event-block" onmouseenter="displayDescription('des1')" onmouseleave="removeDescription('des1', '1000px')">
+                                <img src="images/current-events/event-1-placeholder.jpeg" alt="current event one">
+                                <section class="event-description" id="des1">
+                                    <h3>Event One</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="event-box">
+                            <div class="an-event-block" onmouseenter="displayDescription('des2')" onmouseleave="removeDescription('des2', '1000px')">
+                                <img src="images/current-events/event-2-placeholder.jpeg" alt="current event two">
+                                <section class="event-description" id="des2">
+                                    <h3>Event Two</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="event-box">
+                            <div class="an-event-block" onmouseenter="displayDescription('des3')" onmouseleave="removeDescription('des3', '1000px')">
+                                <img src="images/current-events/event-3-placeholder.jpeg" alt="current event three">
+                                <section class="event-description" id="des3">
+                                    <h3>Event Three</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="event-box">
+                            <div class="an-event-block" onmouseenter="displayDescription('des4')" onmouseleave="removeDescription('des4', '1000px')">
+                                <img src="images/current-events/throw-back.jpg" alt="current event four">
+                                <section class="event-description" id="des4">
+                                    <h3>Event Four</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="event-box">
+                            <div class="an-event-block" onmouseenter="displayDescription('des5')" onmouseleave="removeDescription('des5', '1000px')">
+                                <img src="images/placeholder/photo-placeholder.png" alt="current event five">
+                                <section class="event-description" id="des5">
+                                    <h3>Event Five</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="event-box">
+                            <div class="an-event-block" onmouseenter="displayDescription('des6')" onmouseleave="removeDescription('des6', '1000px')">
+                                <img src="images/placeholder/photo-placeholder.png" alt="current event six">
+                                <section class="event-description" id="des6">
+                                    <h3>Event Six</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="event-box">
+                            <div class="an-event-block" onmouseenter="displayDescription('des7')" onmouseleave="removeDescription('des7', '1000px')">
+                                <img src="images/placeholder/photo-placeholder.png" alt="current event seven">
+                                <section class="event-description" id="des7">
+                                    <h3>Event Seven</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="event-control-box" class="control-box">
+                        <button id="event-left-btn" class="move-left-btn">◀</button>
+                        <span id="event-count" class="count"></span>
+                        <button id="event-right-btn" class="move-right-btn">▶</button>
+                    </div>
+                </section>
+                <section id="card-3">
+                    <h2 class="h2-headers">Spotlights</h2>
+                    <div id="spotlight">
+                        <div id="advertisement-box" onmouseover="changeVisibility('advertisement', '1')" onmouseleave="changeVisibility('advertisement', '0.8')">
+                            <img src="images/hotel.jpg" alt="an hotel">
+                            <section id="advertisement">
+                                <h3>Advert Description</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, unde sint! Dolor iste laudantium debitis, ex aspernatur beatae quidem officia velit et, ab modi saepe tenetur doloremque! Ullam, aspernatur numquam?</p>
+                            </section>
+                        </div>
+                        <video src="video/advert/Best-Modern-Bedroom.mp4" controls autoplay muted></video>
+                    </div>
+                </section>
+                <section id="card-4">
+                    <h2 class="h2-headers">Weather Info</h2>
+                    <div id="info-graph">
+                        <div id="area-box">Area: <span id="area" class="weather-info">Nigeria, Benin</span></div> 
+                        <div id="weather-box">Weather: <span id="weather">☪️</span> - <span id="temp" class="weather-info">32℃</span></div>
+                        <div id="time-box">Time: <span id="time" class="weather-info">5/6/2024 - 06:11am</span> - <span id="time-description" class="weather-info">Morning</span></div>
+                    </div>
+                </section>
+            </div>
         </main>
         <footer>
-            <img src="../chamber/images/benin-hotel-coc-logo.png" alt="site logo">
-            <div id="footer-contact">
-                <span id="footer-contact"><a href="tel:+2348073956165"><img src="images/icons/dark_phone.png" alt="telephone icon"></a><a href="https://wa.me/+2348073956165"><img src="images/icons/whatsapp.png" alt="whatsapp icon"></a><a href="mailto:danielcopute@gmail.com"><img src="images/icons/email.png" alt="gmail icon"></a></span>
+            <div id="footer-logo-holder">
+                <img src="../chamber/images/benin-hotel-coc-logo-bhc.png" alt="site logo">    
             </div>
-            <h4>Creating Hospitality, Driving Growth</h4>
-            <div id="copyright-box">
-                &copy;<span id="footer-current-date">2024</span> | Daniel C. Opute - WDD230 | <a href="chamber-site-plan.html">Site-Plan</a>
+            <div id="footer-content">
+                <div id="footer-contacts">
+                    <span id="footer-contact"><a href="tel:+2348073956165"><img src="images/icons/white_phone.png" alt="telephone icon"></a><a href="https://wa.me/+2348073956165"><img src="images/icons/whatsapp.png" alt="whatsapp icon"></a><a href="mailto:danielcopute@gmail.com"><img src="images/icons/email.png" alt="gmail icon"></a></span>
+                </div>
+                <h4>Creating Hospitality, Driving Growth</h4>
+                <div id="copyright-box">
+                    &copy;<span id="footer-current-date">2024</span> | Daniel C. Opute - WDD230 | <a href="chamber-site-plan.html">Site-Plan</a>
+                </div>
+            </div>
+            <div id="footer-logo-holder-2">
+                <img src="../chamber/images/benin-hotel-coc-logo-bhc.png" alt="site logo">    
             </div>
         </footer>
     </div>

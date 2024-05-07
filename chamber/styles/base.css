@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lugrasimo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 :root{
     /* Major Colors */
     --primary-color: #094074;
     --primary-color2: rgba(0, 0, 0, 0.6);
-    --secondary-color: #3C6997;
+    --primary-color3: rgba(0, 0, 0, 1);
+    --primary-color4: rgba(0, 0, 0, 0.8);
+    --secondary-color: #3c6997;
     --accent-one: #ff9100;
     --accent-two: #5ADBFF;
     --accent-three: #f8f9fd;
@@ -157,7 +155,7 @@ button {
     width: 80px;
     height: 30px;
     background-color: var(--primary-color);
-    color: var(--accent-one);
+    color: var(--accent-three);
     font-weight: bold;
     font-family: var(--heading-font-two);
     align-content: center;
@@ -173,6 +171,11 @@ button:hover {
 button:active {
     transform: scale(1);
     opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-three);
 }
 
 @media screen and (max-width: 890px) {
@@ -194,19 +197,17 @@ button:active {
     }
     nav #logo{
         display: inline-block;
-        width: 25px;
+        width: 50px;
         height: 50px;
         padding: 0 .5rem;
         margin-left: 1rem;
-        background-color: white;
-        border-radius: 100%;
         animation-name: rotate-image;
         animation-duration: 5s;
         animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
         animation-iteration-count: infinite;
     }
     nav ul {
-        width: 50%;
+        width: 65%;
         text-align: center;
         align-items: center;
         height: 100vh;
@@ -215,21 +216,20 @@ button:active {
         position: absolute;
         top: 67px;
         left: 100%;
-        display: hidden;
         z-index: 2;
-        background-color: var(--primary-color2);
+        background-color: var(--primary-color3);
         transition: left 0.5s;
     }
     .show {
         display: block;
-        left: 50%;
+        left: 35%;
     }
     nav ul li {
         text-decoration: none;
         list-style: none;
         margin: 0;
         align-content: center;
-        border: 1px solid var(--primary-color);
+        border: 1px dotted var(--primary-color);
         width: 100%;
     }
     nav ul li a {
@@ -255,7 +255,7 @@ button:active {
 
     #hamburger {
         display: inline-block;
-        width: 80%;
+        width: 75%;
     }
     #menu {
         /* width: 80%; */
@@ -264,6 +264,9 @@ button:active {
         height: 100%;
         position: relative;
         font-size: 2.5em;
+        box-shadow: none;
+        border: none;
+        color: var(--accent-one);
     }
     #menu::before {
         content: "☰";
@@ -310,28 +313,40 @@ button:active {
         position: relative;
         top: -10vh;
     }
+    #header-intro h1 {
+        opacity: 0;
+        transition: opacity 2s;
+    }
     #header-intro h2 {
         color: var(--headline-color-on-color);
+        opacity: 0;
+        transition: opacity 2s;
+        /* display: none; */
     }
     #header-intro #call-to-action-btn {
         width: 120px;
         height: 60px;
         font-size: 1.2em;
-        color: var(--paragraph-color-on-white);
+        color: var(--primary-color3);
         background-color: var(--accent-one);
         text-shadow: 1px 1px 2px var(--paragraph-color-on-color);
     }
 
     /* MAIN */
     main {
-        background-color: var(--primary-color);
-        padding: 1rem;
+        /* background-color: var(--primary-color); */
+        background: url(../images/hotel-banner-2.png);
+        /* padding: 1rem; */
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 1rem;
     }
+    main #main-overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
     main section {
-        background-color: var(--accent-three);
+        /* background-color: var(--accent-three); */
+        background: none;
         margin: 0;
     }
     main section .h2-headers, #first-main-h2 {
@@ -370,6 +385,7 @@ button:active {
         font-size: 1.2em;
         font-weight: bold;
         font-family: var(--heading-font-two);
+        color: var(--accent-three);
     }
 
     /* WHAT WE DO */
@@ -391,8 +407,10 @@ button:active {
         width: 100%;
         grid-row: 2/3;
         margin: 0;
+        border: 1px solid var(--primary-color);
     }
     .card-we-do {
+        background-color: var(--accent-three);
         width: 100%;
         height: auto;
         display: inline-block;
@@ -420,6 +438,8 @@ button:active {
 
     main #card-2 #scroll-layer-2 {
         transition: scrollX 2s;
+        border: 1px solid var(--primary-color);
+        background-color: var(--accent-three);
     }
     main #card-2 #scroll-layer-2 .event-box {
         width: 90%;
@@ -437,11 +457,13 @@ button:active {
     }
     .event-box img {
         width: 100%;
-        height: 100%;
+        height: 50vh;
         grid-column: 1/2;
         grid-row: 1/2;
     }
     .event-box .event-description {
+        background-color: var(--primary-color4);
+        color: var(--accent-three);
         grid-column: 1/2;
         grid-row: 1/2;
         align-content: center;
@@ -450,12 +472,18 @@ button:active {
         position: relative;
         top: 1000px;
         transition: top 0.8s, left 0.8s;
+        border: none
     }
     .event-description h3 {
         text-align: center;
+        color: var(--accent-three);
     }
     .event-description p {
         padding: 1rem;
+        color: var(--accent-three)
+    }
+    .event-description span {
+        display: none;
     }
 
     /* SPORT LIGHT SECTION */
@@ -464,7 +492,9 @@ button:active {
         grid-template-columns: 1fr 200px 1fr;
         grid-template-rows: 1fr;
         padding: 1rem;
-        align-content: center;   
+        align-content: center;
+        border: 1px solid var(--primary-color);
+        background-color: var(--accent-three);
     }
 
     #spotlight #advertisement-box{
@@ -472,20 +502,28 @@ button:active {
         grid-row: 1/2;
         display: grid;
         opacity: 1;
+        border: 1px dotted var(--primary-color);
     }
     #advertisement-box img {
         grid-column: 1/2;
         grid-row: 1/2;
         width: 100%;
+        height: 50vh;
     }
     #advertisement-box section {
         grid-column: 1/2;
         grid-row: 1/2;
         opacity: 1;
         align-self: last baseline;
+        background-color: var(--primary-color3);
+        border: none;
     }
-    #advertisement h3{
+    #advertisement h3 {
         text-align: center;
+        color: var(--accent-three);
+    }
+    #advertisement p {
+        color: var(--accent-three);
     }
     
     #spotlight video {
@@ -510,6 +548,9 @@ button:active {
         font-weight: bold;
         font-size: 1.2em;
         row-gap: 1rem;     
+        border: 1px solid var(--primary-color);
+        background-color: var(--accent-three);
+        /* color: var(--accent-); */
     }
     #info-graph .weather-info {
         font-weight: normal;
@@ -520,6 +561,10 @@ button:active {
         display: grid;
         justify-content: center;
         text-align: center;
+        padding: 1rem;
+        box-sizing: border-box;
+        background-color: var(--primary-color);
+        color: var(--accent-three)
     }
     footer img {
         width: 100px;
@@ -538,6 +583,12 @@ button:active {
     footer #footer-contact a img {
         width: 25px;
         height: 25px;
+    }
+    footer h4 {
+        color: var(--accent-three);
+    }
+    footer #footer-logo-holder-2 {
+        display: none;
     }
     footer #copyright-box {
         word-spacing: 0.4rem;

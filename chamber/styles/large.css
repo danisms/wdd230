@@ -115,7 +115,7 @@
         width: 80px;
         height: 30px;
         background-color: var(--primary-color);
-        color: var(--accent-one);
+        color: var(--accent-three);
         font-weight: bold;
         font-family: var(--heading-font-two);
         align-content: center;
@@ -155,11 +155,11 @@
     nav #logo{
         grid-column: 1/2;
         grid-row: 1/2;
-        width: 25px;
+        width: 50px;
         height: 50px;
         padding: 0 1rem;
-        background-color: white;
-        border-radius: 100%;
+        /* background-color: white; */
+        /* border-radius: 100%; */
         animation-name: rotate-image;
         animation-duration: 5s;
         animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -235,25 +235,48 @@
         position: relative;
         top: -10vh;
     }
+    #header-intro h1 {
+        opacity: 0;
+        transition: opacity 2s;
+    }
     #header-intro h2 {
         color: var(--headline-color-on-color);
+        opacity: 0;
+        transition: opacity 2s;
+        /* display: none; */
     }
     #header-intro #call-to-action-btn {
         width: 120px;
         height: 60px;
         font-size: 1.2em;
-        color: var(--paragraph-color-on-white);
+        color: var(--primary-color3);
         background-color: var(--accent-one);
         text-shadow: 1px 1px 2px var(--paragraph-color-on-color);
     }
 
     /* MAIN */
     main {
-        /* background-color: var(--primary-color); */
+        /* padding: 1rem; */
+        display: grid;
+        grid-template-columns: 1fr;
+        /* row-gap: 1rem; */
+        background: url("../images/hotel-banner-2.png");
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+    }
+    #main-overlay {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 1rem;
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 1rem;
+        box-sizing: border-box;
+        /* display: none; */
     }
     main section {
         background-color: var(--accent-three);
@@ -338,15 +361,16 @@
     main #card-2 #scroll-layer-2 {
         transition: scrollX 2s;
         border: 1px solid var(--primary-color);
+        background-color: var(--accent-three);
     }
     main #card-2 #scroll-layer-2 .event-box {
         width: 30.5%;
-        height: auto;
+        height: 100%;
         margin: 0 1rem;
         display: inline-block;
         box-sizing: border-box;
         white-space: wrap;
-        border: 1px solid var(--primary-color);
+        /* border: 1px solid var(--primary-color); */
         background: none;
     }
     .event-box .an-event-block {
@@ -354,12 +378,15 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         overflow: hidden;
+        width: 100%;
+        height: 100%;
     }
     .event-box img {
         width: 100%;
-        height: 100%;
+        height: 50vh;
         grid-column: 1/2;
         grid-row: 1/2;
+        border: 1px dotted var(--primary-color);
     }
     .event-box .event-description {
         grid-column: 1/2;
@@ -370,12 +397,18 @@
         position: relative;
         top: 1000px;
         transition: top 0.8s, left 0.8s;
+        background-color: var(--primary-color4);
     }
     .event-description h3 {
         text-align: center;
+        color: var(--accent-three);
     }
     .event-description p {
         padding: 1rem;
+        color: var(--accent-three);
+    }
+    .event-description span {
+        display: none;
     }
 
     #card-2 #event-control-box {
@@ -387,6 +420,7 @@
         font-size: 1.2em;
         font-weight: bold;
         font-family: var(--heading-font-two);
+        color: var(--accent-three);
     }
 
     /* SPORT LIGHT SECTION */
@@ -400,7 +434,8 @@
         grid-template-rows: 1fr;
         padding: 1rem;
         align-content: center;
-        border: 1px solid var(--primary-color)
+        border: 1px solid var(--primary-color);
+        background-color: var(--accent-three);
     }
 
     #spotlight #advertisement-box{
@@ -410,7 +445,7 @@
         transition: opacity 1.5s;
     }
     #spotlight #advertisement-box:hover {
-        z-index: 1;
+        z-index: 2;
         animation-name: make-visual;
         animation-duration: 0.5s;
     }
@@ -418,6 +453,7 @@
         grid-column: 1/2;
         grid-row: 1/2;
         width: 100%;
+        height: 65vh;
     }
     #advertisement-box section {
         grid-column: 1/2;
@@ -425,9 +461,15 @@
         opacity: 0.8;
         transition: opacity 0.5s;
         align-self: last baseline;
+        background-color: var(--primary-color4);
+        border: none;
     }
     #advertisement h3{
         text-align: center;
+        color: var(--accent-three);
+    }
+    #advertisement p {
+        color: var(--accent-three);
     }
     
     #spotlight video {
@@ -435,6 +477,10 @@
         grid-row: 1/2;
         width: 100%;
         align-self: center;
+        z-index: 1;
+    }
+    #spotlight video:hover {
+        z-index: 2;
     }
 
     /* WEATHER INFO */
@@ -454,6 +500,7 @@
         font-size: 1.2em;
         row-gap: 1rem;    
         border: 1px solid var(--primary-color); 
+        background-color: var(--accent-three);
     }
     #info-graph .weather-info {
         font-weight: normal;
@@ -462,21 +509,31 @@
     /* FOOTER */
     footer {
         display: grid;
-        grid-template-columns: 100px 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
         justify-content: center;
         text-align: center;
         padding: 1rem;
         align-items: center;
+        column-gap: 10px;
         border: 1px solid var(--primary-color);
+        box-sizing: border-box;
+        background-color: var(--primary-color);
+        color: var(--accent-three);
+    }
+    footer #footer-logo-holder-2 {
+        /* border: 1px solid var(--primary-color); */
+        grid-column: 3/4;
     }
     footer img {
         width: 100px;
         height: 100px;
-        grid-column: 1/2;
-        grid-row: 1/5;
-        border: 1px solid var(--primary-color)
+        /* border: 1px solid var(--primary-color) */
     }
+    footer #footer-content {
+        grid-column: 2/3;
+        /* grid-row: 1/2; */
+        /* border: 1px solid var(--primary-color) */
+    }
+    
     footer #footer-contact {
         display: flex;
         align-content: center;
@@ -499,6 +556,7 @@
     footer h4 {
         grid-column: 2/3;
         grid-row: 2/3;
+        color: var(--accent-three);
     }
 
     footer #copyright-box {
