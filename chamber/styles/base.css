@@ -37,7 +37,7 @@ body {
     max-width: 1600px;
     margin: 0 auto;
     /* padding: 2em; */
-    font-size: 16px;
+    font-size: 14px;
     /* text-align: center; */
     overflow: auto;
     /* background-color: var(--accent-four); */
@@ -476,7 +476,7 @@ button:active {
     #advertisement-box img {
         grid-column: 1/2;
         grid-row: 1/2;
-        width: 80%;
+        width: 100%;
     }
     #advertisement-box section {
         grid-column: 1/2;
