@@ -553,10 +553,13 @@
         border: none;
     }
 
-    footer h4 {
+    footer h3 {
         grid-column: 2/3;
         grid-row: 2/3;
         color: var(--accent-three);
+        font-size: 0.9em;
+        margin: 0.5rem;
+        box-sizing: border-box;
     }
 
     footer #copyright-box {

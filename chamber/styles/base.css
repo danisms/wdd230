@@ -584,8 +584,11 @@ a {
         width: 25px;
         height: 25px;
     }
-    footer h4 {
+    footer h3 {
         color: var(--accent-three);
+        font-size: 0.9em;
+        margin: 0.5rem;
+        box-sizing: border-box;
     }
     footer #footer-logo-holder-2 {
         display: none;
