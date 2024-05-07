@@ -593,6 +593,11 @@ a {
     footer #copyright-box {
         word-spacing: 0.4rem;
     }
+    footer #last-update {
+        display: block;
+        margin: 0.5rem;
+        box-sizing: border-box;
+    }
 }
 
 /* ANIMATIONS */

@@ -332,3 +332,15 @@ setTimeout(() => {
         delayFunctionCall = 0;
     }, 3500);
 }, 3700);
+
+// get and set last modification date
+const copyDateEle = document.querySelector('#footer-current-date');
+const lastModifiedEle = document.querySelector('#last-update');
+
+// get current date and time and set it to element value
+let currentDateAndTime = new Date();
+let currentYear = currentDateAndTime.getFullYear();
+let lastModified = document.lastModified;
+
+copyDateEle.innerHTML = currentYear;
+lastModifiedEle.innerHTML = `Last Modification: ${lastModified}`;
