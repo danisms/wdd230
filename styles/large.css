@@ -122,6 +122,18 @@
         border-right: 0;
         margin: 1rem 0 1rem 0;
     }
+
+    main picture {
+        width: 100%;
+        height: auto;
+        grid-column: 1/4;
+    }
+    
+    main picture img {
+        width: 100%;
+        height: auto;
+    }
+
     #main-title {
         text-align: left;
     }
