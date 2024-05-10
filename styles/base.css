@@ -202,8 +202,16 @@ section ul li .week {
 #second-section #information p {
     color: var(--primary-color);
 }
+
+a#area-map {
+    background: none;
+    padding: 1rem;
+    width: 100%;
+}
 iframe {
-    grid-column: 1/4;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 footer {
