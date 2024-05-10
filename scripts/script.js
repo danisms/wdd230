@@ -75,10 +75,13 @@ themeBtn.addEventListener('click', () => {
 
 // adding page visit counter
 const pageVisitElement = document.querySelector('#pageVisit'); 
-window.localStorage.setItem('visit-num', '0');
-let visitCount = parseInt(window.localStorage.getItem('visit-num'));
+let visitCount = parseInt(window.localStorage.getItem('visit-num')) || 0;
 if (visitCount > 0) {
     pageVisitElement.innerHTML = `Page Visit: ${visitCount}`;
 }else {
     pageVisitElement.textContent = "Welcome, this is your first visit";
 }
+
+// increment visitCount and reasign value
+visitCount += 1;
+window.localStorage.setItem('visit-num', `${visitCount}`);
