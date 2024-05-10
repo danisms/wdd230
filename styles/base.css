@@ -202,6 +202,9 @@ section ul li .week {
 #second-section #information p {
     color: var(--primary-color);
 }
+iframe {
+    grid-column: 1/4;
+}
 
 footer {
     text-align: center;
