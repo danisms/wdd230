@@ -203,11 +203,6 @@ section ul li .week {
     color: var(--primary-color);
 }
 
-a#area-map {
-    background: none;
-    padding: 1rem;
-    width: 100%;
-}
 iframe {
     width: 100%;
     height: auto;
