@@ -1,8 +1,8 @@
 @media screen and (min-width: 890px) {
 
-    /* * {
+    * {
         border: 1px solid black;
-    } */
+    }
 
     body {
         max-width: 1600px;
@@ -260,7 +260,7 @@
         display: grid;
         grid-template-columns: 1fr;
         /* row-gap: 1rem; */
-        background: url("../images/hotel-banner-2.png");
+        /* background: url("../images/hotel-banner-2.png"); */
         background-size: contain;
         width: 100%;
         height: 100%;
@@ -270,7 +270,7 @@
         grid-row: 1/2;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
+        /* background-color: rgba(0, 0, 0, 0.8); */
         padding: 1rem;
         display: grid;
         grid-template-columns: 1fr;
@@ -566,4 +566,82 @@
         grid-column: 2/3;
         grid-row: 3/4;
     }
+}
+
+/*  DISCOVER PAGE STYLING */
+/*  DISCOVER PAGE STYLING */
+/*  DISCOVER PAGE STYLING */
+#discover {
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+    justify-content: center;
+    justify-items: center;
+    gap: 1rem;
+}
+#discover-main {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+#discover-sidebar {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+/* Discover Sidebar */
+#discover-sidebar #info-graph {
+    padding: 1rem;
+}
+
+#discover-sidebar #weather-box-discover {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+/* Discover Main */
+#discover-main picture {
+    /* width: 100%; */
+    /* height: 100%; */
+    margin: 0 1rem;
+    box-sizing: border-box;
+    background: none;
+}
+.a-discover-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+picture img {
+    width: 100%;
+    height: auto;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: 1px dotted var(--primary-color);
+}
+.discover-description {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-content: center;
+    padding: 0;
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 1000px;
+    transition: top 0.8s, left 0.8s;
+    background-color: var(--primary-color4);
+}
+.discover-description h3 {
+    text-align: center;
+    color: var(--accent-three);
+}
+.discover-description p {
+    width: auto;
+    padding: 1rem;
+    color: var(--accent-three);
+    box-sizing: border-box;
+}
+.discover-description span {
+    display: none;
 }

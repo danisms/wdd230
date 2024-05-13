@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel C. Opute">
+    <meta name="description" content="The Benin Hotel Chamber of Commerce aims to foster unity and drive significant development within the hotel industry in Benin City, Nigeria. Our primary objective is to unite hotel owners to facilitate seamless networking among industry leaders, ultimately leading to substantial growth and advancement in the hospitality sector.">
+    <!-- Important Open Graph protocol (og) -->
+    <meta property="og:title" content="Benin Hotel Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://danisms.github.io/wdd230/chamber/images/hotels-in-benin.png">
+    <meta property="og:url" content="https://beninhotelhub.org">
+    <!-- <meta name="twitter:card" content=""> -->
+    <!-- Optional Open Graph protocol (og) -->
+    <meta property="og:description" content="The Benin Hotel Chamber of Commerce aims to foster unity and drive significant development within the hotel industry in Benin City, Nigeria. Our primary objective is to unite hotel owners to facilitate seamless networking among industry leaders, ultimately leading to substantial growth and advancement in the hospitality sector.">
+    <meta property="og:site_name" content="Benin Hotel Chamber of Commerce">
+    <meta name="twitter:image:alt" content="hotels in benin">
+    <!-- Optional Non-Essential, But Required for Analytics -->
+    <!-- <meta property="fb:app_id" content="[your_app_id]"> -->
+    <!-- <meta name="twitter:site" content="[@website-username]"> -->
+    <!-- Using Fonts-->
+    <!-- Font 1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Font 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Font 3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="styles/base.css" type="text/css">
+    <link rel="stylesheet" href="styles/large.css" type="text/css">
+    <!-- Add fonts here -->
+    <!-- Site Icon -->
+    <link rel="icon" href="favicon.ico">
+    <title>Benin Hotel Chamber of Commerce</title>
+</head>
+<body>
+    <div id="home-content">
+        <nav>
+            <img id="logo" src="images/benin-hotel-coc-logo.png" alt="Benin Hotel Chamber of Commerce Logo">
+            <div id="hamburger">
+                <button id="menu" name="hamburger-menu"><span id="menu-btn-content">≡</span></button>
+            </div>
+            <ul id="nav-display">
+                <li><a href=".">Home</a></li>
+                <li><a href="discover.html" class="selected">Discover</a></li>
+                <li><a href="">Directory</a></li>
+                <li><a href="">Join</a></li>
+            </ul>
+        </nav>
+        <header>
+            <img src="images/hotel-banner.webp" alt="hotel exterior">
+            <div id="header-overlay" class="overlay"></div>
+            <div id="header-intro">
+                <h1 id="head-title">Discover All In BHCC</h1>
+                <h2 id="head-motto">Connecting Hospitality, Driving Growth</h2>
+                <button id="call-to-action-btn">JOIN</button>
+            </div>
+        </header>
+        <main>
+            <div id="main-overlay">
+                <div id="discover">
+                    <div id="discover-main">
+                        <picture>
+                            <div class="a-discover-block" onmouseenter="displayDescription('des1')" onmouseleave="removeDescription('des1', '1000px')">
+                                <source media="(max-width: 500px)" srcset="">
+                                <source media="(max-width: 1000px)" srcset="">
+                                <img src="images/current-events/event-3-placeholder.jpeg" alt="image description" width="850" height="550" loading="lazy">
+                                <section class="discover-description" id="des1">
+                                    <h3>Discover One</h3>
+                                    <p>
+                                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                    </p>
+                                </section>
+                            </div>
+                        </picture>
+                        <picture>
+                            <div class="a-discover-block" onmouseenter="displayDescription('des2')" onmouseleave="removeDescription('des2', '1000px')">
+                                <source media="(max-width: 500px)" srcset="">
+                                <source media="(max-width: 1000px)" srcset="">
+                                <img src="images/current-events/event-3-placeholder.jpeg" alt="image description" width="850" height="550" loading="lazy">
+                                <section class="discover-description" id="des2">
+                                    <h3>Discover Two</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </picture>
+                        <picture>
+                            <div class="a-discover-block" onmouseenter="displayDescription('des3')" onmouseleave="removeDescription('des3', '1000px')">
+                                <source media="(max-width: 500px)" srcset="">
+                                <source media="(max-width: 1000px)" srcset="">
+                                <img src="images/current-events/event-3-placeholder.jpeg" alt="image description" width="850" height="550" loading="lazy">
+                                <section class="discover-description" id="des3">
+                                    <h3>Discover Three</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </picture>
+                        <picture>
+                            <div class="a-discover-block" onmouseenter="displayDescription('des4')" onmouseleave="removeDescription('des4', '1000px')">
+                                <source media="(max-width: 500px)" srcset="">
+                                <source media="(max-width: 1000px)" srcset="">
+                                <img src="images/current-events/event-3-placeholder.jpeg" alt="image description" width="850" height="550" loading="lazy">
+                                <section class="discover-description" id="des4">
+                                    <h3>Discover Four</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </picture>
+                        <picture>
+                            <div class="a-discover-block" onmouseenter="displayDescription('des5')" onmouseleave="removeDescription('des5', '1000px')">
+                                <source media="(max-width: 500px)" srcset="">
+                                <source media="(max-width: 1000px)" srcset="">
+                                <img src="images/current-events/event-3-placeholder.jpeg" alt="image description" width="850" height="550" loading="lazy">
+                                <section class="discover-description" id="des5">
+                                    <h3>Event Five</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </picture>
+                        <picture>
+                            <div class="a-discover-block" onmouseenter="displayDescription('des6')" onmouseleave="removeDescription('des6', '1000px')">
+                                <source media="(max-width: 500px)" srcset="">
+                                <source media="(max-width: 1000px)" srcset="">
+                                <img src="images/current-events/event-3-placeholder.jpeg" alt="image description" width="850" height="550" loading="lazy">
+                                <section class="discover-description" id="des6">
+                                    <h3>Event Six</h3>
+                                    <p></p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eligendi aperiam sequi est doloremque dolores fugiat illo numquam quas reprehenderit? Incidunt omnis ab esse culpa, aut rem quaerat inventore porro!</span>
+                                </section>
+                            </div>
+                        </picture>
+                    </div>
+                    <div id="discover-sidebar">
+                        <section>
+                            <h2 class="h2-headers">Section 1</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit, eos vel commodi voluptate aspernatur tenetur harum iure blanditiis autem, eius mollitia nulla distinctio in, itaque minus cum vero sunt quis. Dicta rerum ipsum nam, culpa quo vero distinctio ipsam facere tempore, quia quod laudantium debitis quibusdam dolorem maxime iure nobis incidunt fuga neque laboriosam autem quam illo. Quas amet tenetur nemo, pariatur, accusantium excepturi vitae praesentium hic aliquid ullam consectetur. Eligendi assumenda ducimus laudantium laboriosam harum! Quia repellat, nemo eaque soluta esse rerum! Deleniti at esse in asperiores nam nulla, cupiditate aut tempore hic sapiente reiciendis blanditiis incidunt voluptatibus.
+                            </p>
+                        </section>
+                        <section id="card-4">
+                            <h2 class="h2-headers">Weather Info</h2>
+                            <div id="info-graph"> 
+                                <div id="weather-box-discover">
+                                    Area: <span id="area" class="weather-info">Nigeria, Benin</span><br><br>
+                                    Temperature: <span id="temp-icon">☪️</span> - <span id="temp" class="weather-info">32℃ - </span><span id="temp-description" class="weather-info">Normal</span><br><br>
+                                    Humidity: <span id="humidity" class="weather-info">35%</span><br><br>
+                                    Wind Chill: <span id="wind-chill" class="weather-info">NAN</span> 
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-logo-holder">
+                <img src="../chamber/images/benin-hotel-coc-logo-bhc.png" alt="site logo">    
+            </div>
+            <div id="footer-content">
+                <div id="footer-contacts">
+                    <span id="footer-contact"><a href="tel:+2348073956165"><img src="images/icons/white-phone.png" alt="telephone icon"></a><a href="https://wa.me/+2348073956165"><img src="images/icons/whatsapp.png" alt="whatsapp icon"></a><a href="mailto:danielcopute@gmail.com"><img src="images/icons/email.png" alt="gmail icon"></a></span>
+                </div>
+                <h3>Creating Hospitality, Driving Growth</h3>
+                <div id="copyright-box">
+                    &copy;<span id="footer-current-date">2024</span> | Daniel C. Opute - WDD230 | <span id="last-update">Last-Modification:</span>
+                </div>
+            </div>
+            <div id="footer-logo-holder-2">
+                <img src="../chamber/images/benin-hotel-coc-logo-bhc.png" alt="site logo">    
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/discover.js" defer></script>
+</body>
+</html>
