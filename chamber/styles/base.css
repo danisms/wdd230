@@ -194,6 +194,71 @@ a {
     display: none;
 }
 
+/* Calender */
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #1abc9c;
+    text-align: center;
+  }
+  
+  .month ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .month .prev {
+    float: left;
+    padding-top: 10px;
+  }
+  
+  .month .next {
+    float: right;
+    padding-top: 10px;
+  }
+  
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+  }
+  
+  .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+  }
+  
+  .days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+  }
+  
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+  }
+  
+  .days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+  }
+
 @media screen and (max-width: 890px) {
     /* NAV */
     nav {
@@ -615,6 +680,102 @@ a {
         display: block;
         margin: 0.5rem;
         box-sizing: border-box;
+    }
+    /*  DISCOVER PAGE STYLING */
+    /*  DISCOVER PAGE STYLING */
+    /*  DISCOVER PAGE STYLING */
+    #discover {
+        display: block;
+        justify-items: center;
+    }
+    #discover-main {
+        margin: 1rem 0;
+    }
+    #discover-sidebar {
+        display: block;
+        overflow-x: scroll;
+        gap: 1rem;
+        white-space: nowrap;
+        scrollbar-width: none;
+        margin: 1rem 0;
+    }
+
+    /* Discover Sidebar */
+    #discover-sidebar section {
+        width: 80%;
+        height: 300px;
+        overflow-y: auto;
+        display: inline-block;
+        white-space: wrap;
+        scrollbar-width: none;
+    }
+    .discover-sidebar-paragraph-text {
+        border: 1px solid var(--primary-color);
+        background-color: var(--accent-three);
+        color: black;
+        padding: 1rem;
+    }
+    
+    #discover-sidebar #info-graph {
+        padding: 1rem;
+        height: 65%;
+    }
+
+    #discover-sidebar #weather-box-discover {
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    /* Discover Main */
+    #discover-main .discover-box {
+        /* width: 100%; */
+        /* height: 100%; */
+        margin: 1rem;
+        box-sizing: border-box;
+        background: none;
+    }
+    .a-discover-block {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .a-discover-block picture {
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .a-discover-block picture img {
+        width: 100%;
+        height: auto;
+        border: 1px dotted var(--primary-color);
+    }
+    .discover-description {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        align-content: center;
+        padding: 1rem;
+        box-sizing: border-box;
+        width: 100%;
+        height: 40%;
+        position: relative;
+        top: 60%;
+        transition: top 0.8s, left 0.8s;
+        background: linear-gradient(var(--primary-color4), var(--primary-color));
+
+    }
+    .discover-description h3 {
+        text-align: center;
+        color: var(--accent-three);
+    }
+    .discover-description p {
+        color: var(--accent-three);
+        box-sizing: border-box;
+    }
+    .discover-description span {
+        color: var(--accent-three);
     }
 }
 

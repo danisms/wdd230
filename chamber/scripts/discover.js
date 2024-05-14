@@ -62,53 +62,57 @@ let delayFunctionCall = 10000;
 // Display event description
 function displayDescription(elementId) {
     // delay function for home title intro text writing display to complete
-    setTimeout(() => {
-        const ele = document.querySelector(`#${elementId}`);
-        const paragraph = ele.children[1];
-        const text = ele.children[2];
-        ele.style.top = 0;
-        ele.style.left = 0;
-
-        // display righting
-        // console.log(ele.children);  // for testing purpose
-        // console.log(paragraph);  // for testing purpose
-        const textValue = text.textContent;
-        // console.log(textValue);  // for texting purpose;
-        // call function to display paragraph by letters;
-        textByLetter(textValue, paragraph, 80);
-    }, delayFunctionCall);  // this is set to zero once title intro is complete; check downward for the call.
+    if (window.innerWidth >= 890) {
+        setTimeout(() => {
+            const ele = document.querySelector(`#${elementId}`);
+            const paragraph = ele.children[1];
+            const text = ele.children[2];
+            ele.style.top = 0;
+            ele.style.left = 0;
+    
+            // display righting
+            // console.log(ele.children);  // for testing purpose
+            // console.log(paragraph);  // for testing purpose
+            const textValue = text.textContent;
+            // console.log(textValue);  // for texting purpose;
+            // call function to display paragraph by letters;
+            textByLetter(textValue, paragraph, 80);
+        }, delayFunctionCall);  // this is set to zero once title intro is complete; check downward for the call.
+    }
 }
 
 // Remove event description
 function removeDescription(elementId, direction) {
         // delay function for intro text writing display to complete
-        setTimeout(() => {
-            randomNum = Math.random() * 4
-        randomNum = Math.ceil(randomNum)
-        // console.log(randomNum);  // for testing purpose
-        const ele = document.querySelector(`#${elementId}`);
-        const paragraph = ele.children[1];
-        if (randomNum == 1) {
-            ele.style.top = direction;
-            // console.log('remove top');  // for testing purpose
-        }else if (randomNum == 2) {
-            ele.style.left = `-${direction}`;
-            // console.log('remove right');
-        }else if (randomNum == 3) {
-            ele.style.top = `-${direction}`;;
-            // console.log('remove bottom');
-        }else {
-            ele.style.left = direction;
-            // console.log('remove left');
+        if (window.innerWidth >= 890) {
+            setTimeout(() => {
+                randomNum = Math.random() * 4
+                randomNum = Math.ceil(randomNum)
+                // console.log(randomNum);  // for testing purpose
+                const ele = document.querySelector(`#${elementId}`);
+                const paragraph = ele.children[1];
+                if (randomNum == 1) {
+                    ele.style.top = direction;
+                    // console.log('remove top');  // for testing purpose
+                }else if (randomNum == 2) {
+                    ele.style.left = `-${direction}`;
+                    // console.log('remove right');
+                }else if (randomNum == 3) {
+                    ele.style.top = `-${direction}`;;
+                    // console.log('remove bottom');
+                }else {
+                    ele.style.left = direction;
+                    // console.log('remove left');
+                }
+        
+                clearInterval(writing);  // for clearing writing interval set by textByLetter function.
+                // enable all buttons disabled by textByLetter function.
+                const allBtn = document.querySelectorAll('button')
+                allBtn.forEach((button)=>{
+                    button.disabled = false;
+                });
+            }, delayFunctionCall);
         }
-
-        clearInterval(writing);  // for clearing writing interval set by textByLetter function.
-        // enable all buttons disabled by textByLetter function.
-        const allBtn = document.querySelectorAll('button')
-        allBtn.forEach((button)=>{
-            button.disabled = false;
-        });
-    }, delayFunctionCall);
 }
 
 
