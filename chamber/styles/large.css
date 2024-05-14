@@ -593,17 +593,51 @@
         overflow-y: auto;
         scrollbar-width: thin;
         scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.5);
+        display: grid;
+        row-gap: 1rem;
     }
 
     /* Discover Sidebar */
+    #discover-sidebar section p {
+        margin: 1rem 0.2rem;
+    }
     #discover-sidebar #info-graph {
         padding: 1rem;
+        font-size: 1em;
     }
 
     #discover-sidebar #weather-box-discover {
         font-size: 0.8em;
         margin: 0;
     }
+    /* Calender */
+    #discover-calender {
+       font-size: 1em;
+       padding: 0;
+    }
+    .weekdays {
+        margin: 0;
+        padding: 10px;
+        background-color: #ddd;
+        /* box-sizing: border-box; */
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+    .weekdays li {
+        display: inline-block;
+        width: 12%;
+        color: #666;
+        text-align: center;
+    }
+    .days li {
+        list-style-type: none;
+        display: inline-block;
+        width: 11.6%;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size:11px;
+        color: #777;
+      }
     
 
     /* Discover Main */

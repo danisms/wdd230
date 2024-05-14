@@ -195,11 +195,20 @@ a {
 }
 
 /* Calender */
-.month {
-    padding: 70px 25px;
+#discover-calender {
     width: 100%;
-    background: #1abc9c;
+    height: 100%;
+    /* border: 1px solid var(--primary-color); */
+}
+ul {
+    list-style-type: none;
+}
+.month {
+    padding: 2rem;
+    width: 100%;
+    background: var(--primary-color);
     text-align: center;
+    box-sizing: border-box;
   }
   
   .month ul {
@@ -241,6 +250,8 @@ a {
     padding: 10px 0;
     background: #eee;
     margin: 0;
+    height: 43%;
+    box-sizing: border-box;
   }
   
   .days li {
@@ -255,8 +266,8 @@ a {
   
   .days li .active {
     padding: 5px;
-    background: #1abc9c;
-    color: white !important
+    background: var(--primary-color);
+    color: white
   }
 
 @media screen and (max-width: 890px) {
@@ -424,6 +435,7 @@ a {
     }
     main #main-overlay {
         background-color: rgba(0, 0, 0, 0.8);
+        overflow: hidden;
     }
     main section {
         /* background-color: var(--accent-three); */
@@ -718,13 +730,28 @@ a {
     
     #discover-sidebar #info-graph {
         padding: 1rem;
-        height: 65%;
+        height: 188px;
+        /* background-color: yellow; */
     }
 
     #discover-sidebar #weather-box-discover {
         font-size: 0.8em;
         margin: 0;
     }
+
+    /*Calender*/
+    .weekdays li, .days li {
+        width: 12.5%;
+    }
+    .days li .active {
+        padding: 2px;
+    }
+
+    .days {
+        padding: 10px 0;
+        background: #eee;
+        height: 50%;
+      }
 
     /* Discover Main */
     #discover-main .discover-box {
