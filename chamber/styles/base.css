@@ -242,7 +242,7 @@ ul {
   .weekdays li {
     display: inline-block;
     width: 13.6%;
-    color: #666;
+    color: black;
     text-align: center;
   }
   

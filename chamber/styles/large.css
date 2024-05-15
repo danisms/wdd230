@@ -630,7 +630,7 @@
     .weekdays li {
         display: inline-block;
         width: 12%;
-        color: #666;
+        color: black;
         text-align: center;
     }
 
