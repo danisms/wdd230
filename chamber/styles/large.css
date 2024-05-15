@@ -601,6 +601,10 @@
     #discover-sidebar section p {
         margin: 1rem 0.2rem;
     }
+    #visit-msg {
+        text-align: center;
+        font-weight: bold;
+    }
     #discover-sidebar #info-graph {
         padding: 1rem;
         font-size: 1em;
@@ -629,6 +633,7 @@
         color: #666;
         text-align: center;
     }
+
     .days li {
         list-style-type: none;
         display: inline-block;
@@ -654,6 +659,8 @@
         grid-template-rows: 1fr;
         overflow: hidden;
         width: 100%;
+        background-color: var(--accent-four);
+        margin-bottom: 2rem;
     }
     .a-discover-block picture {
         width: 100%;
