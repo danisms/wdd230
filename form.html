@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css" type="text/css">
     <link rel="icon" href="favicon.ico">
     <title>Daniel C. Opute - WDD 230 - Web Frontend Development</title>
 </head>
@@ -31,40 +32,48 @@
         <button id="menu"><span id="menu-btn-content">button</span></button>
         <nav>
             <ul>
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="chamber/index.html">Chamber</a></li>
                 <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
-                <li><a href="form.html">Form</a></li>
+                <li><a href="form.html" class="active">Form</a></li>
             </ul>
         </nav>
         <main>
-            <div id="temple-label">Salt Late Temple - Utah</div>
-            <picture>
-                <source srcset="images/hero-small.webp" media="(max-width: 400px)">
-                <source srcset="images/hero-large.webp" media="(max-width: 960px)">
-                <img src="images/salt-lake-temple-763229-_1_.webp" alt="Salt Lake Temple at Utah" width="690" height="250">
-            </picture>
-            <h1 id="main-title">WDD 230: Web Frontend Development</h1>
-            <section id="first-section" class="card">
-                <h2>Learn Activities</h2>
-                <ul>
-                    <li><a class="week" href="">Week 01:</a><a href=""> Layout</a> | <a href="">Media Query</a> | <a href="">JS Pen</a></li>
-                    <li><a class="week" href="">Week 02:</a><a href="https://codepen.io/Opute-Daniel/pen/abxgNag"> Hamburger-Menu</a> | <a href="week02/bom.html"> 📖Book of Mormon - Top 10 </a></li>
-                    <li><a class="week" href="">Week 03:</a><a href="week03/images/landscape.webp"> Webp</a> | <a href="week03/lazyload.html">Lazy Load</a> | <a href="week03/responsive-images.html">Responsive-Image</a></li>
-                    <li><a class="week" href="">Week 04:</a><a href="https://codepen.io/Opute-Daniel/pen/BaeowyJ"> Learn Pseudo Class</a> | <a href="week04/images/Screenshot 2024-05-16 151319.png"> W3Schools Combinators Activity</a> | <a href="week04/tablebuild.html">Learn Table</a> | <a href="week04/Form-start/index.html">Learn Form</a></li>
-                    <li><a class="week" href="">Week 05:</a></li>
-                    <li><a class="week" href="">Week 06:</a></li>
-                </ul>
-            </section>
-            <section id="second-section" class="card">
-                <h2>Information</h2>
-                <div id="information">
-                    <p id="countryAndCity">Nigeria, Edo</p>
-                    <p id="weather">☪️ 35℃ - Night</p>
-                    <p id="pageVisit">Page Visits: 5</p>
+            <h1>Sign Up Form</h1>
+            <p id="pageVisit" style="color: black; display: none;">Page Visits: 5</p>
+            <form action="record.html" method="get" class="wf1">
+                <label>Username* <input type="text" name="username" required></label>
+                
+                <label>Password* <input type="password" name="pass1" pattern="[A-Za-z0-9]{8,}" title="Password must be a list 8 characters long and can only be alpha-numeric" required></label>
+                
+                <label>Re-Enter Password* <input type="password" name="pass2" pattern="[A-Za-z0-9]{8,}" title="Password must be a list 8 characters long and can only be alpha-numeric" required></label>
+
+                <div id="passwordErrorMsgBox"> 
+                    <p id="passErrMsg">Password don't match</p>
                 </div>
-            </section>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63454.45269158143!2d5.576504558522507!3d6.276444290274702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d145c0cf03a9%3A0x1242f9c5909ba566!2sOka%2C%20Benin%20City%2C%20Edo!5e0!3m2!1sen!2sng!4v1715301374463!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <label>Email* <input type="email" name="email" pattern="[a-zA-Z0-9._%+\-]+@byui\.edu" placeholder="example@byui.edu" title="Please enter a valid email address" required></label>
+                
+                <label>
+                    Page Rating 
+                    <span id="rateCount"></span>
+                    <input type="range" name="pageRate" min="1" max="10" step="1" value="7" list="rangeValues">
+                    <datalist id="rangeValues">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </datalist>
+                </label>
+                
+                <input type="submit" value="Sign Up">
+            </form>
         </main>
         <footer>
             <p class="footer-p">
@@ -78,5 +87,6 @@
     </div>
     <script src="scripts/script.js" defer></script>
     <script src="scripts/getDates.js" defer></script>
+    <script src="scripts/validate.js"></script>
 </body>
 </html>
