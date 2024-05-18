@@ -42,22 +42,22 @@
             <h1>Sign Up Form</h1>
             <p id="pageVisit" style="color: black; display: none;">Page Visits: 5</p>
             <form action="record.html" method="get" class="wf1">
-                <label>Username* <input type="text" name="username" required></label>
+                <label>Username* <input type="text" name="username" id="username" required></label>
                 
-                <label>Password* <input type="password" name="pass1" pattern="[A-Za-z0-9]{8,}" title="Password must be a list 8 characters long and can only be alpha-numeric" required></label>
+                <label>Password* <input type="password" name="pass1" id="pass1" pattern="[A-Za-z0-9]{8,}" title="Password must be a list 8 characters long and can only be alpha-numeric" required></label>
                 
-                <label>Re-Enter Password* <input type="password" name="pass2" pattern="[A-Za-z0-9]{8,}" title="Password must be a list 8 characters long and can only be alpha-numeric" required></label>
+                <label>Re-Enter Password* <input type="password" name="pass2" id="pass2" pattern="[A-Za-z0-9]{8,}" title="Password must be a list 8 characters long and can only be alpha-numeric" required></label>
 
                 <div id="passwordErrorMsgBox"> 
                     <p id="passErrMsg">Password don't match</p>
                 </div>
                 
-                <label>Email* <input type="email" name="email" pattern="[a-zA-Z0-9._%+\-]+@byui\.edu" placeholder="example@byui.edu" title="Please enter a valid email address" required></label>
+                <label>Email* <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+\-]+@byui\.edu" placeholder="example@byui.edu" title="Please enter a valid email address" required></label>
                 
                 <label>
                     Page Rating 
                     <span id="rateCount"></span>
-                    <input type="range" name="pageRate" min="1" max="10" step="1" value="7" list="rangeValues">
+                    <input type="range" name="pageRate" id="pageRate" min="1" max="10" step="1" value="7" list="rangeValues">
                     <datalist id="rangeValues">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -72,7 +72,7 @@
                     </datalist>
                 </label>
                 
-                <input type="submit" value="Sign Up">
+                <input type="submit" value="Sign Up" id="submitBtn">
             </form>
         </main>
         <footer>
