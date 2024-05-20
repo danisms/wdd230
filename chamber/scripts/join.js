@@ -54,6 +54,13 @@ window.addEventListener("scroll", () => {
     }
 })
 
+// get and add the current timestampt to form
+const timeStampElement = document.querySelector('#timestamp');
+let timestamp = Date.now();
+// console.log(timestamp);
+timeStampElement.value = timestamp;
+// console.log(timeStampElement.value);  // for testing purpose
+
 // get and set last modification date
 const copyDateEle = document.querySelector('#footer-current-date');
 const lastModifiedEle = document.querySelector('#last-update');
