@@ -865,7 +865,7 @@ ul {
     display: block;
     align-items: center;
 }
-#join-main h2 {
+#join-main h1 {
     text-align: center;
     font-size: 1.5em;
     color: var(--accent-three);
