@@ -1,0 +1,53 @@
+{
+    "familyName" : "Opute",
+    "dateMovedIn" : "14-06-2002",
+    "NumberOfRecords" : 8,
+    "visitedByBishop" : true,
+    "individualFamilyMembers" : [
+        {
+            "name" : "Tom",
+            "gender" : "male",
+            "birthDate" : "23-03-1957"
+        },
+        {
+            "name" : "Ann",
+            "gender" : "female",
+            "birthDate" : "04-04-1963"
+        },
+        {
+            "name" : "Donald",
+            "gender" : "male",
+            "birthDate" : "14-01-1984"
+        },
+        {
+            "name" : "Joel",
+            "gender" : "male",
+            "birthDate" : "03-12-1986"
+        },
+        {
+            "name" : "Sunday",
+            "gender" : "male",
+            "birthDate" : "29-10-1988"
+        },
+        {
+            "name" : "Gabriel",
+            "gender" : "male",
+            "birthDate" : "24-07-1991"
+        },
+        {
+            "name" : "Ruth",
+            "gender" : "female",
+            "birthDate" : "23-05-1995"
+        },
+        {
+            "name" : "Daniel",
+            "gender" : "male",
+            "birthDate" : "22-12-2000"
+        },
+        {
+            "name" : "Victor",
+            "gender" : "male",
+            "birthDate" : "23-09-2004"
+        }
+    ]
+}
