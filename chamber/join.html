@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel C. Opute">
+    <meta name="description" content="Join The Benin Hotel Chamber of Commerce which aims to foster unity and drive significant development within the hotel industry in Benin City, Nigeria. Our primary objective is to unite hotel owners to facilitate seamless networking among industry leaders, ultimately leading to substantial growth and advancement in the hospitality sector.">
+    <!-- Important Open Graph protocol (og) -->
+    <meta property="og:title" content="Benin Hotel Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://danisms.github.io/wdd230/chamber/images/hotels-in-benin.png">
+    <meta property="og:url" content="https://beninhotelhub.org">
+    <!-- <meta name="twitter:card" content=""> -->
+    <!-- Optional Open Graph protocol (og) -->
+    <meta property="og:description" content="Join the Benin Hotel Chamber of Commerce which aims to foster unity and drive significant development within the hotel industry in Benin City, Nigeria. Our primary objective is to unite hotel owners to facilitate seamless networking among industry leaders, ultimately leading to substantial growth and advancement in the hospitality sector.">
+    <meta property="og:site_name" content="Benin Hotel Chamber of Commerce">
+    <meta name="twitter:image:alt" content="hotels in benin">
+    <!-- Optional Non-Essential, But Required for Analytics -->
+    <!-- <meta property="fb:app_id" content="[your_app_id]"> -->
+    <!-- <meta name="twitter:site" content="[@website-username]"> -->
+    <!-- Using Fonts-->
+    <!-- Font 1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Font 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Font 3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="styles/base.css" type="text/css">
+    <link rel="stylesheet" href="styles/large.css" type="text/css">
+    <!-- Add fonts here -->
+    <!-- Site Icon -->
+    <link rel="icon" href="favicon.ico">
+    <title>Join Benin Hotel Chamber of Commerce</title>
+</head>
+<body>
+    <div id="home-content">
+        <nav>
+            <img id="logo" src="images/benin-hotel-coc-logo-small.webp" alt="Benin Hotel Chamber of Commerce Logo">
+            <div id="hamburger">
+                <button id="menu" name="hamburger-menu"><span id="menu-btn-content">≡</span></button>
+            </div>
+            <ul id="nav-display">
+                <li><a href=".">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="">Directory</a></li>
+                <li><a href="join.html" class="selected">Join</a></li>
+            </ul>
+        </nav>
+        <main id="join-main">
+            <div id="join-overlay">
+                <h1>Become A Member</h1>
+                <h2 style="display: none;">Benin chamber of commerce</h2>
+                <form action="thankyou.html" method="get" class="join-form">
+                    <fieldset id="personal-info">
+                        <legend>Personal Info</legend>
+                        <label>first name* <input type="text" name="fname" id="fname" required></label>
+                        <label>last name* <input type="text" name="lname" id="lname" required></label>
+                        <label>title or position <input type="text" name="position" id="position" pattern="[A-Za-z\-\s]{7,}" title="Value must be at least seven (7) characters long and may only contain alpha characters, hyphens, and spaces."></label>
+                        <label>email* <input type="email" name="email" id="email" placeholder="example@gmail.com" required></label>
+                        <label>phone* <input type="tel" name="phone" id="phone" required></label>
+                    </fieldset>
+                    <fieldset id="membership-level">
+                        <legend>Membership Level</legend>
+                        <label class="membership">
+                            <input type="radio" name="membership" value="non-profit" checked>
+                            <span class="membership-header">NP Membership - (Free)</span>
+                            <span class="para">
+                                NP stands for non-profit organization. This membership level is for non-profit organization and it is free.
+                            </span>
+                        </label>
+                        <label class="membership">
+                            <input type="radio" name="membership" value="bronze">
+                            <span class="membership-header">Bronze Membership - $10/Month</span>
+                            <span class="benefit-list">
+                                ▸ Event Adverts - Yes<br>
+                                ▸ Event Discount - Yes<br>
+                                ▸ Bussiness Advertisment - No<br>
+                                ▸ Sportlight Display - No<br>
+                                ▸ Blog in Discover - No<br>
+                            </span>
+                        </label>
+                        <label class="membership">
+                            <input type="radio" name="membership" value="silver">
+                            <span class="membership-header">Silver Membership - $15/Month</span>
+                            <span class="benefit-list">
+                                ▸ Event Adverts - Yes<br>
+                                ▸ Event Discount - Yes<br>
+                                ▸ Bussiness Advertisment - Yes<br>
+                                ▸ Sportlight Display - No<br>
+                                ▸ Blog in Discover - No<br>
+                            </span>
+                        </label>
+                        <label class="membership">
+                            <input type="radio" name="membership" value="gold">
+                            <span class="membership-header">Gold Membership - $25/Month</span>
+                            <span class="benefit-list">
+                                ▸ Event Adverts - Yes<br>
+                                ▸ Event Discount - Yes<br>
+                                ▸ Bussiness Advertisment - Yes<br>
+                                ▸ Sportlight Display - Yes<br>
+                                ▸ Blog in Discover - Yes<br>
+                            </span>
+                        </label>
+                    </fieldset>
+                    <fieldset id="business-info">
+                        <legend>Business Info</legend>
+                        <label>business/organization's name* <input type="text" name="businessName" id="businessName" required></label>
+                        <label>description <textarea name="businessDescription" id="businessDescription" placeholder="Enter a detailed description of your business or organization."></textarea></label>
+                        <label><input type="hidden" name="timestamp" id="timestamp"></label>
+                    </fieldset>
+                    <label id="submit-btn"><input type="submit" value="Join"></label>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-logo-holder">
+                <img src="../chamber/images/benin-hotel-coc-logo-bhc-small.webp" alt="site logo" width="100" height="110">    
+            </div>
+            <div id="footer-content">
+                <div id="footer-contacts">
+                    <span id="footer-contact"><a href="tel:+2348073956165"><img src="images/icons/white-phone.png" alt="telephone icon"></a><a href="https://wa.me/+2348073956165"><img src="images/icons/whatsapp.png" alt="whatsapp icon"></a><a href="mailto:danielcopute@gmail.com"><img src="images/icons/email.png" alt="gmail icon"></a></span>
+                </div>
+                <h3>Creating Hospitality, Driving Growth</h3>
+                <div id="copyright-box">
+                    &copy;<span id="footer-current-date">2024</span> | Daniel C. Opute - WDD230 | <span id="last-update">Last-Modification:</span>
+                </div>
+            </div>
+            <div id="footer-logo-holder-2">
+                <img src="../chamber/images/benin-hotel-coc-logo-bhc-small.webp" alt="site logo" width="100" height="110">    
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/join.js" defer></script>
+</body>
+</html>

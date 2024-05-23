@@ -851,3 +851,126 @@ ul {
         opacity: 1;
     }
 }
+
+/* JOIN FORM */
+#join-main {
+    background-color: var(--primary-color);
+}
+#join-overlay {
+    padding: 4rem 1rem 1rem 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--accent-three);
+    box-sizing: border-box;
+    margin-bottom: 1px;
+    display: block;
+    align-items: center;
+}
+#join-main h1 {
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--accent-three);
+    font-family: var(--heading-font-one);
+}
+#join-main .membership-header {
+    color: var(--accent-three);
+}
+#join-main p {
+    color: var(--accent-three);
+    font-size: 0.8em;
+}
+
+/* form */
+#join-main .join-form {
+    font-size: 1.2rem;
+    justify-content: center;
+}
+.join-form fieldset {
+    border-radius: 10px;
+    margin: auto auto 1.5rem auto;
+    max-width: 400px;
+}
+.join-form fieldset legend {
+    font-weight: bold;
+    font-family: var(--heading-font-one);
+}
+
+.join-form label {
+    display: block;
+    padding-top: 1rem;
+    margin: 0 auto;
+    max-width: 400px;
+    font-family: var(--heading-font-two);
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+.join-form label input, .join-form textarea {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: var(--accent-three);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    outline-color: var(--accent1-color);
+}
+.join-form label input:required,
+.join-form label input[type="text"]:invalid {
+    border-right: 5px solid var(--accent-one);
+}
+
+.join-form label input:required:valid,
+.join-form label input[type="text"]:valid {
+    outline-color: green;
+    border: 1px solid green;
+    border-right: 5px solid green;
+}
+
+/*form membership level */
+.join-form .membership {
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 1rem auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr;
+}
+
+.membership:active {
+    background-color: var(--secondary-color);
+}
+.membership .membership-header {
+    /* font-size: 1em; */
+    font-weight: bold;
+}
+.membership .para {
+    grid-column: 1/3;
+    /* margin-left: 2.3rem; */
+    margin-top: .5rem;
+    line-height: 1.2rem;
+}
+.membership .benefit-list {
+    grid-column: 1/3;
+    list-style-type: circle;
+    margin: 0 0 1rem 0;
+    line-height: 2rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.join-form textarea {
+    height: 200px;
+}
+
+.join-form input[type=submit] {
+    background-color: var(--primary-color);
+    /* border: none; */
+    box-shadow: 0 0 5px var(--secondary-color);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+.join-form input[type="submit"]:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
