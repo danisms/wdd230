@@ -1,0 +1,93 @@
+{
+    "weeks" : [
+        {
+            "week":"Week 1",
+            "links": [
+                {
+                    "url":"",
+                    "title":"Layout"
+                },
+                {
+                    "url":"",
+                    "title":"Media Query"
+                },
+                {
+                    "url":"",
+                    "title":"JS Pen"
+                }
+            ]
+        },
+        {
+            "week":"Week 2",
+            "links": [
+                {
+                    "url":"https://codepen.io/Opute-Daniel/pen/abxgNag",
+                    "title":"Hamburger-Menu"
+                },
+                {
+                    "url":"week02/bom.html",
+                    "title":"📖Book of Mormon - Top 10"
+                }
+            ]
+        },
+        {
+            "week":"Week 3",
+            "links": [
+                {
+                    "url":"week03/images/landscape.webp",
+                    "title":"Webp"
+                },
+                {
+                    "url":"week03/lazyload.html",
+                    "title":"Lazy Load"
+                },
+                {
+                    "url":"week03/responsive-images.html",
+                    "title":"Responsive-Image"
+                }
+            ]
+        },
+        {
+            "week":"Week 4",
+            "links": [
+                {
+                    "url":"https://codepen.io/Opute-Daniel/pen/BaeowyJ",
+                    "title":"Learn Pseudo Class"
+                },
+                {
+                    "url":"week04/images/Screenshot 2024-05-16 151319.png",
+                    "title":"W3Schools Combinators Activity"
+                },
+                {
+                    "url":"week04/tablebuild.html",
+                    "title":"Learn Table"
+                },
+                {
+                    "url":"week04/Form-start/index.html",
+                    "title":"Learn Form"
+                }
+            ]
+        },
+        {
+            "week":"Week 5",
+            "links": [
+                {
+                    "url":"https://codepen.io/Opute-Daniel/pen/JjqKaZv",
+                    "title":"Learn Pseudo Element"
+                },
+                {
+                    "url":"week05/new-ward-members.json",
+                    "title":"My New Ward-Members Json File"
+                },
+                {
+                    "url":"week05/prophets.html",
+                    "title":"Latter-day Prophets (Fetch API)"
+                },
+                {
+                    "url":"week05/weather.html",
+                    "title":"Weather API"
+                }
+            ]
+        }
+    ]
+}
