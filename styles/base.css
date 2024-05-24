@@ -33,6 +33,9 @@ a {
     /* color: var(--accent3-color); */
     /* text-decoration: none; */
 }
+a.visit:visited {
+    color: white;
+}
 
 #theme-mode {
     width: 1.5rem;
