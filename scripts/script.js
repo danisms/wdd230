@@ -59,6 +59,8 @@ themeBtn.addEventListener('click', () => {
         // sections.style.borderColor = 'white';
         a.forEach(anchor => {
             anchor.style.color = 'white';
+            anchor.classList.toggle('visit');
+            // anchor.visited.color = 'white';
         });
     }else {
         themeBtn.src = lightOff
