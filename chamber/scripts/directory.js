@@ -154,7 +154,7 @@ function textByLetter(text, element, speed) {
 // display page title
 const homeTitle = document.getElementById('head-title');
 homeTitle.style.opacity = '1';
-textByLetter('Discover All In B.H.C.C', '#head-title', 75);
+textByLetter('Meet Members of the B.H.C.C', '#head-title', 75);
 setTimeout(() => {
     const headMotto = document.querySelector('#head-motto')
     // headMotto.style.display = 'block';
@@ -176,33 +176,3 @@ let lastModified = document.lastModified;
 
 copyDateEle.innerHTML = currentYear;
 lastModifiedEle.innerHTML = `Last Modification: ${lastModified}`;
-
-// UPDATE PAGE VISIT MESSAGE USING LOCAL STORAGE
-// get elements
-const updateParagraphElement = document.querySelector('#visit-msg');
-
-// get milliseconds to hour
-const msToHour = 3600000 * 24;
-const msToDay = msToHour * 24;
-// console.log(msToDay);  // for testing purpose
-let currentDate = Date.now()  // get current date and time in milliseconds (timestamp)
-// console.log(currentDate);  // for testing purpose
-
-// get or store the last visit date and time in milliseconds.
-let lastVisitDate = parseInt(window.localStorage.getItem('visit-date')) || currentDate;
-
-// compare last visit with current visit date and welcome user based on the result
-let intervalVisit = (currentDate - lastVisitDate)/msToDay;
-// console.log(`Interval Visit: ${(currentDate - lastVisitDate)/msToDay}`);  // for testing purpose;
-
-if (currentDate - lastVisitDate > 0 && intervalVisit < 1) {
-    updateParagraphElement.innerHTML = "Back so soon! Awesome!";
-} else if (currentDate - lastVisitDate > 0 && intervalVisit >= 1) {
-    let lastVisitDay = Math.round((lastVisitDate - currentDate) / msToDay);
-    updateParagraphElement.innerHTML = `You last visited ${lastVisitDay} ${lastVisitDay <= 1 ? 'day':'days'} ago.`;
-} else {
-    updateParagraphElement.innerHTML = "Welcome! Let us know if you have any questions.";
-}
-
-// update local storage with current date visit.
-window.localStorage.setItem('visit-date', `${currentDate}`);

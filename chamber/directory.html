@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Daniel C. Opute">
-    <meta name="description" content="The Benin Hotel Chamber of Commerce aims to foster unity and drive significant development within the hotel industry in Benin City, Nigeria. Our primary objective is to unite hotel owners to facilitate seamless networking among industry leaders, ultimately leading to substantial growth and advancement in the hospitality sector.">
+    <meta name="description" content="Discover members of the Benin Hotel Chamber of Commerce which aim to foster unity and drive significant development within the hotel industry in Benin City, Nigeria. Our primary objective is to unite hotel owners to facilitate seamless networking among industry leaders, ultimately leading to substantial growth and advancement in the hospitality sector.">
     <!-- Important Open Graph protocol (og) -->
     <meta property="og:title" content="Benin Hotel Chamber of Commerce">
     <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://beninhotelhub.org">
     <!-- <meta name="twitter:card" content=""> -->
     <!-- Optional Open Graph protocol (og) -->
-    <meta property="og:description" content="The Benin Hotel Chamber of Commerce aims to foster unity and drive significant development within the hotel industry in Benin City, Nigeria. Our primary objective is to unite hotel owners to facilitate seamless networking among industry leaders, ultimately leading to substantial growth and advancement in the hospitality sector.">
+    <meta property="og:description" content="Discover members of the Benin Hotel Chamber of Commerce which aim to foster unity and drive significant development within the hotel industry in Benin City, Nigeria. Our primary objective is to unite hotel owners to facilitate seamless networking among industry leaders, ultimately leading to substantial growth and advancement in the hospitality sector.">
     <meta property="og:site_name" content="Benin Hotel Chamber of Commerce">
     <meta name="twitter:image:alt" content="hotels in benin">
     <!-- Optional Non-Essential, But Required for Analytics -->
@@ -38,30 +38,36 @@
     <!-- Add fonts here -->
     <!-- Site Icon -->
     <link rel="icon" href="favicon.ico">
-    <title>Benin Hotel Chamber of Commerce</title>
+    <title>B.H.C.C Directory</title>
 </head>
 <body>
     <div id="home-content">
         <nav>
-            <img id="logo" src="images/benin-hotel-coc-logo-small.webp" alt="Benin Hotel Chamber of Commerce Logo">
+            <img id="logo" src="images/benin-hotel-coc-logo-small.webp" width="50" height="45" alt="Benin Hotel Chamber of Commerce Logo">
             <div id="hamburger">
                 <button id="menu" name="hamburger-menu"><span id="menu-btn-content">≡</span></button>
             </div>
             <ul id="nav-display">
                 <li><a href=".">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html" class="selected">Join</a></li>
+                <li><a href="directory.html" class="selected">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
-        <main style="width: 100%; height: 80vh; background-color: var(--primary-color);">
-            <div id="join-overlay" style="width: 100%; height: 100%; align-content: center; text-align: center; padding: 1rem; box-sizing: border-box;">
-                <h2 style="color: white; align-self: end;">Form Submited Successfully</h2>
-                <p style="color: white;">
-                    Thank you for choosing to join the Benin Chamber of Commerce.<br>
-                    Your request has been submited, we will review it, and get back to you shortly.
-                    Please check your email.
-                </p>
+        <header>
+            <!-- <img src="images/hotel-banner.webp" alt="hotel exterior"> -->
+            <div id="header-overlay" class="overlay"></div>
+            <div id="header-intro">
+                <h1 id="head-title">Meet Members of the B.H.C.C</h1>
+                <h2 id="head-motto">Connecting Hospitality, Driving Growth</h2>
+                <a href="join.html"><button id="call-to-action-btn">JOIN</button></a>
+            </div>
+        </header>
+        <main>
+            <div id="main-overlay">
+                <div id="directory">
+                    
+                </div>
             </div>
         </main>
         <footer>
@@ -82,6 +88,6 @@
             </div>
         </footer>
     </div>
-    <script src="scripts/home.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
 </body>
 </html>
