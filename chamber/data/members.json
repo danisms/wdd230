@@ -11,14 +11,14 @@
             "description" : "Protea Hotel Benin City Select Emotan is located in the heart of Benin City, the capital of Edo State in southern mid-west Nigeria. Its location is ideal for both leisure and business travelers, conveniently situated 10 minutes from the airport and a 5 minutes from Benin Golf Course. Our 87 beautifully appointed guest room amenities include satellite TV, air-conditioning, telephone, work desk, hairdryer, electronic safes and tea, coffee making facilities. Enjoy hotel services at our restaurant, bar, spa, fitness center and swimming pool. Host meetings and events at our hotel where conference facilities allows 24 hour access to our business center and complimentary WiFi."
         },
         {
-            "name" : "Four Point",
-            "address" : "",
-            "map" : "",
-            "phone" : "",
-            "url" : "",
-            "icon" : "",
-            "level" : "",
-            "description" : "Hotel facilities include a state-of-the-art 24-hour fitness centre, an outdoor pool, 400 square meters of flexible meeting spaces and a fully equipped business center. The hotel will provide all of the brand’s defining elements including the signature Four Points bed, complimentary bottled water in all rooms and suites, fast and free Wi-Fi throughout the hotel, and an energizing breakfast with fresh coffee that helps guests start and end the day right."
+            "name" : "Choice Gate",
+            "address" : "G.R.A, 11, Nneka Street, Off Ugbor Rd, Benin City",
+            "map" : "https://maps.app.goo.gl/owmTVYjzDuCQxEDj7",
+            "phone" : "+234 803-386-9576",
+            "url" : "https://www.choicegatehotels.com/",
+            "icon" : "images/directory/icons/choice-gate.webp",
+            "level" : "gold",
+            "description" : "Choice Gate Hotel & Suites is dedicated to providing you with an unforgettable and luxurious stay. From the moment you step through the doors, you will be greeted by the warm and attentive staff, ready to cater to your every need. Indulge in the beautifully appointed rooms and suites, each thoughtfully designed to ensure your utmost comfort. Whether you're here for business or leisure, the hotel offers a perfect blend of modern amenities and timeless elegance."
         },
         {
             "name" : "Viewpoint",
@@ -27,8 +27,18 @@
             "phone" : "+234 902-444-9999",
             "url" : "https://vpointhotel.com/",
             "icon" : "images/directory/icons/viewpoint.webp",
-            "level" : "Gold",
+            "level" : "gold",
             "description" : "VIEWPOINT HOTEL AND SUITES provides accommodations with a garden, free private parking, a restaurant and a bar. With free WiFi, this 5-star hotel offers room service and a 24-hour front desk. Some units at the property feature a balcony with a city view."
+        },
+        {
+            "name" : "Randekhi Gold Wing",
+            "address" : "8 Uhenuyi St, Oka, Benin City 300251, Edo",
+            "map" : "https://maps.app.goo.gl/MMn6kNXS4LSLbxko7",
+            "phone" : "+234 809-212-7611",
+            "url" : "http://www.randekhihotels.com/",
+            "icon" : "",
+            "level" : "gold",
+            "description" : "Our bright and tastefully furnished rooms, which are decorated with modern interior designs and selected antique furniture, will make you feel good. The stunning views will make your stay unforgettable. The rooms boast nice views and all are en-suite. Naturally, air-conditioning, mini bar, internet access, telephone, TV, e.t.c are all there for your convenience."
         },
         {
             "name" : "Golden Tulip",
@@ -37,7 +47,7 @@
             "phone" : "+234 811-288-6798",
             "url" : "https://www.tripadvisor.com/Hotel_Review-g298361-d1230652-Reviews-Golden_Tulip_Essential_Benin_City-Benin_City_Edo_State.html",
             "icon" : "images/directory/icons/golden-tulip.webp",
-            "level" : "Gold",
+            "level" : "gold",
             "description" : "Golden Tulip Essential Benin City is member of the Golden Tulip chain of Hotels Inns and Resorts. Operated as Excalibur Hotels in the last 13 years and is currently re-branded after the opening of an additional brand new block of 65 keys; comprising Apartments, 1,2,3 bedrooms suites as well as single rooms. Restaurants and Bars (up coming SPA) Gym, Meeting rooms, Banquet Hall etc."
         },
         {
@@ -47,37 +57,27 @@
             "phone" : "+234 811-289-3102",
             "url" : "https://www.booking.com/hotel/ng/adonai.html",
             "icon" : "images/directory/icons/hotel-adonai.webp",
-            "level" : "Bronze",
+            "level" : "silver",
             "description" : "HOTEL ADONAI has accommodations with a restaurant, free private parking and a bar. This 3-star hotel offers room service, a 24-hour front desk and free WiFi. The property provides a concierge service, and currency exchange for guests."
         },
         {
             "name" : "Shamrockmanor",
-            "address" : "",
-            "map" : "",
-            "phone" : "",
-            "url" : "",
-            "icon" : "",
-            "level" : "Bronze",
+            "address" : "20 2nd Ugbor Rd, Oka, Benin City 300102, Edo",
+            "map" : "https://maps.app.goo.gl/sqHiveD8ZogB9Qhf6",
+            "phone" : "+234 807-646-8998",
+            "url" : "https://www.booking.com/hotel/ng/shamrockmanor-theresidence.en-gb.html",
+            "icon" : "images/directory/icons/shamrock.webp",
+            "level" : "silver",
             "description" : "Shamrockmanor(TheResidence) has accommodations with a fitness center, free private parking, a garden and a shared lounge. Each room at the 5-star hotel has city views, and guests can enjoy access to a restaurant and to a bar. The property provides free shuttle service and room service for guests."
         },
         {
-            "name" : "",
+            "name" : "Morzi",
             "address" : "",
             "map" : "",
             "phone" : "",
             "url" : "",
             "icon" : "",
-            "level" : "",
-            "description" : ""
-        },
-        {
-            "name" : "",
-            "address" : "",
-            "map" : "",
-            "phone" : "",
-            "url" : "",
-            "icon" : "",
-            "level" : "",
+            "level" : "silver",
             "description" : ""
         }
     ]
