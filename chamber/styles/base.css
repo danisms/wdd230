@@ -1,6 +1,6 @@
 :root{
     /* Major Colors */
-    --primary-color: #094074;
+    --primary-color: #062f56;
     --primary-color2: rgba(0, 0, 0, 0.6);
     --primary-color3: rgba(0, 0, 0, 1);
     --primary-color4: rgba(0, 0, 0, 0.8);
@@ -180,6 +180,30 @@ a {
     color: var(--accent-three);
 }
 
+#call-to-action-btn {
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 1.5rem;
+    background-color: var(--accent-one);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-family: var(--heading-font-two);
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    transition: transform 0.4s, opacity 0.4s;
+    position: relative;
+    top: .8rem;
+}
+#call-to-action-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+#call-to-action-btn:active {
+    transform: scale(1);
+    opacity: 1;
+}
 /* Horizontal Scrollbar Styling */
 .scroll-layer {
     overflow-x: auto;
@@ -298,6 +322,45 @@ ul {
     background-color: var(--primary-color);
 } */
 
+#directory-header {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    align-content: center;
+}
+
+#directory-header video {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* opacity: 0.4; */
+}
+
+#directory-header #header-intro {
+    width: 100%;
+    height: 100%;
+    /* height: 35vh; */
+    background-color: var(--primary-color2);
+    grid-column: 1/2;
+    grid-row: 1/2;
+    box-sizing: border-box;
+    top: 0;
+    align-content: center;
+}
+
+#directory-header #header-intro a {
+    color: var(--primary-color);
+}
+
+#directory-header #header-overlay {
+    height: auto;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
 #directory-overlay {
     padding: 0;
     margin: 0;
@@ -316,7 +379,7 @@ ul {
 #directory-grid-list-display button {
     width: fit-content;
     height: fit-content;
-    padding: 0.5rem 1rem;
+    padding: .25rem 1rem;
     box-sizing: border-box;
     font-size: 2em;
     background-color: var(--accent-one);
@@ -358,7 +421,6 @@ ul {
 /* membership level/status */
 #directory.grid section .status {
     width: fit-content;
-    font-size: 1.2;
     /* background-color: black; */
     color: white;
     border-radius: 5px;
@@ -366,7 +428,7 @@ ul {
     float: right;
     text-transform: capitalize;
     /* overflow: hidden; */
-    font-family: (var(--heading-font-one));
+    font-family: var(--heading-font-one);
     font-weight: bold;
 }
 #directory.grid section .status-gold {
@@ -485,6 +547,7 @@ ul {
 
 /* Empty Directory Display */
 #directory-empty {
+    width: 100%;
     height: 80vh;
     align-content: center;
     font-size: 2em;
@@ -650,6 +713,8 @@ ul {
         color: var(--primary-color3);
         background-color: var(--accent-one);
         text-shadow: 1px 1px 2px var(--paragraph-color-on-color);
+        position: relative;
+        top: .3rem;
     }
 
     /* MAIN */
@@ -1056,6 +1121,16 @@ ul {
     /* DIRECTORY PAGE STYLING */
     /* DIRECTORY PAGE STYLING */
     /* DIRECTORY PAGE STYLING */
+    #directory-header #header-intro {
+        font-size: .9em;
+        padding-top: 5rem;
+    }
+    #directory-header #header-intro a {
+        width: fit-content;
+        height: fit-content;
+        padding: .5rem 1.5rem;
+    }
+
     #directory.list section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1071,6 +1146,16 @@ ul {
     /* DIRECTORY PAGE STYLING */
     /* DIRECTORY PAGE STYLING */
     /* DIRECTORY PAGE STYLING */
+    #directory-header #header-intro {
+        font-size: 0.8em;
+        padding-top: 5rem;
+    }
+    #directory-header #header-intro a {
+        width: fit-content;
+        height: fit-content;
+        /* padding: .8rem; */
+    }
+
     #directory.list section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
