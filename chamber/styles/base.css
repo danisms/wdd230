@@ -39,6 +39,7 @@ body {
     /* text-align: center; */
     overflow: auto;
     /* background-color: var(--accent-four); */
+    /* border: 2px solid violet; */
 }
 .overflow {
     overflow: hidden;
@@ -62,6 +63,7 @@ header {
     background-color: var(--primary-color);
     box-sizing: border-box;
     overflow: hidden;
+    /* border: 5px solid orange; */
 }
 img {
     display: block;
@@ -275,6 +277,148 @@ ul {
     padding: 0 1rem 1rem 1rem;
     margin: 0;
     box-sizing: border-box;
+}
+
+/* DIRECTORY */
+/*
+<main>
+    <div id="main-overlay">
+        <div id="directory-grid-list-display">
+            <button id="directory-list">≣</button>
+            <button id="directory-grid">▦</button>
+        </div>
+        <div id="directory">
+
+        </div>
+    </div>
+</main>
+*/
+
+#directory-grid-list-display {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#directory-grid-list-display button {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    font-size: 3em;
+    background-color: var(--accent-one);
+    color: var(--primary-color);
+    text-align: center;
+    margin-right: 1rem;
+    border: 0;
+}
+#directory-overlay {
+    padding: 0;
+    margin: 0;
+    background-color: var(--accent-three);
+}
+
+#directory {
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-three);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#directory section {
+    background-color: var(--primary-color);
+    margin: 1rem;
+    /* width: fit-content; */
+    box-shadow: 0 0 15px var(--primary-color);
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#directory .icon-holder {
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid var(--accent-one);
+    background-color: black;
+}
+/* membership level/status */
+#directory section .status {
+    width: fit-content;
+    font-size: 1.5em;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    text-transform: capitalize;
+    overflow: hidden;
+    font-family: (var(--heading-font-one));
+    font-weight: bold;
+}
+#directory section .status-gold {
+    background-color: #ff9100;
+    color:rgba(0, 0, 0, 0.8);
+    padding: .5rem;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#directory section .status-silver {
+    background-color: silver;
+    color:rgba(0, 0, 0, 0.8);
+    padding: .5rem;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#directory section .status-bronze {
+    background-color: brown;
+    color: white;
+    padding: .5rem;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#directory span {
+    display: block;
+    font-family: var(--heading-font-two);
+    text-align: center;
+}
+#directory h2 {
+    color: var(--accent-one);
+    font-family: var(--heading-font-one);
+    font-size: 1.5em;
+    margin: 0.5rem;
+}
+#directory section .description {
+    border: 1px solid var(--accent-one);
+    /* width: 300px; */
+    margin: 0 auto;
+}
+#directory p {
+    color: var(--accent-three);
+}
+
+#directory-empty {
+    height: 80vh;
+    align-content: center;
+    font-size: 2em;
+    background-color: var(--primary-color2);
+    margin: 0;
+    padding: 0;
+}
+
+#directory-empty h2 {
+    font-family: var(--heading-font-one);
+    color: var(--accent-one);
 }
 
 @media screen and (max-width: 890px) {

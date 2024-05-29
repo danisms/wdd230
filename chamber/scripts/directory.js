@@ -165,6 +165,151 @@ setTimeout(() => {
     }, 2500);
 }, 2800);
 
+
+// DISPLAY DIRECTORY
+// get elements
+/*
+<div id="directory-overlay">
+    <div id="directory-grid-list-display">
+        <button id="directory-list">≣</button>
+        <button id="directory-grid">▦</button>
+    </div>
+    <div id="directory">
+        <!-- Only display this if directory is empty -->
+        <div id="directory-empty">
+            <h2>Empty Directory</h2>
+        </div>
+    </div>
+</div>
+*/
+const directory = document.getElementById('directory');
+const emptyDirectory = document.getElementById('directory-empty');
+
+// get json member file
+// api url
+const filepath = 'data/members.json';
+
+async function getData(path)
+{
+    try {
+        let response = await fetch(path);
+        if (response.ok) {
+            let data = await response.json();
+            // console.log(data);  // testing purpose only;
+            displayDirectory(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (err)
+    {
+        console.log(err)
+    }
+}
+
+function displayDirectory(data) {
+    // console.log(data);  // for testing purpose
+    if (data.members.length > 0) {
+        // console.log("data not empty");  // for testing purpose
+
+        // remove empty directory display
+        emptyDirectory.style.display = "none";
+
+        // display data in directory
+        let membersList = data.members;
+        membersList.forEach(member => {
+            // create elements
+            let card = document.createElement('section');
+            let iconHolder = document.createElement('div');
+            let logoIcon = document.createElement('img');
+            let name = document.createElement('h2');
+            let phone = document.createElement('span');
+            let address = document.createElement('span');
+            let site = document.createElement('span');
+            let description = document.createElement('section');
+            let membership = document.createElement('div');
+            let anchor = document.createElement('a');
+
+            // get values
+            let memberName = member.name;
+            let memberAddress = member.address;
+            let mapLink = member.map;
+            let memberPhone = member.phone;
+            let memberCallLine = member.call;
+            let memberSite = member.url;
+            let memberLogo = member.icon;
+            let memberDescription = member.description;
+            let memberLevel = member.level;
+
+            // populating the elements
+            // Name
+            name.innerHTML = memberName;
+            // Phone
+            phone.setAttribute('class', 'other-info');
+            phone.innerHTML = `<a href="tel:${memberCallLine}">${memberPhone}</a>`;
+            // Address
+            address.setAttribute('class', 'other-info');
+            address.innerHTML = `<a href="${mapLink}">${memberAddress}`;
+            // Site
+            site.setAttribute('class', 'other-info');
+            site.setAttribute('class', 'site');
+            site.innerHTML = `<a href="${memberSite} target="_blank"">Visit-Site</a>`;
+            // Description
+            description.setAttribute('class', 'description');
+            description.innerHTML = `<p>${memberDescription}</p>`;
+            // membership status
+            if (memberLevel == 'gold') {
+                membership.setAttribute('class', 'status');
+                membership.innerHTML = `<span class="status-gold">${memberLevel}</span>`;
+            } else if (memberLevel == 'silver') {
+                membership.setAttribute('class', 'status');
+                membership.innerHTML = `<span class="status-silver">${memberLevel}</span>`
+            } else if (memberLevel == 'bronze') {
+                membership.setAttribute('class', 'status');
+                membership.innerHTML = `<span class="status-bronze">${memberLevel}</span>`
+            } else {
+                membership.setAttribute('class', 'status');
+                membership.innerHTML = `<span class="status-free">${memberLevel}</span>`
+            }
+
+            // Anchor
+            anchor.setAttribute('href', `${memberSite}`);
+            anchor.setAttribute('target', '_blank');
+
+
+            // Image
+            logoIcon.setAttribute('src', memberLogo);
+            logoIcon.setAttribute('alt', `log of ${memberName} hotel`);
+            logoIcon.setAttribute('loading', 'lazy');
+            logoIcon.setAttribute('width', '150');
+            logoIcon.setAttribute('height', '150');
+
+            // Image Holder
+            iconHolder.setAttribute('class', 'icon-holder');
+            iconHolder.appendChild(logoIcon);
+            
+            // append child to parent element
+            card.appendChild(membership);
+            card.appendChild(iconHolder);
+            card.appendChild(name);
+            card.appendChild(address);
+            card.appendChild(phone);
+            card.appendChild(site);
+            card.appendChild(description);
+
+            // add card to anchor so as to visit site onclick
+            anchor.appendChild(card);
+
+            directory.appendChild(anchor);
+        });
+
+    } else {
+        console.log("empty data");  // for testing purpose
+        // do nothing and display empty directory.
+    }
+}
+
+getData(filepath);
+
 // get and set last modification date
 const copyDateEle = document.querySelector('#footer-current-date');
 const lastModifiedEle = document.querySelector('#last-update');

@@ -5,80 +5,88 @@
             "address" : "Off Benin Sapele Rd, Oka, Benin City 300251, Edo",
             "map" : "https://maps.app.goo.gl/wNZAYy9PPm3yiCZ96",
             "phone" : "+234 813-987-7770",
+            "call" : "+2348139877770",
             "url" : "https://www.marriott.com/en-us/hotels/bnise-protea-hotel-benin-city-select-emotan/overview/",
             "icon" : "images/directory/icons/protea.webp",
             "level" : "gold",
-            "description" : "Protea Hotel Benin City Select Emotan is located in the heart of Benin City, the capital of Edo State in southern mid-west Nigeria. Its location is ideal for both leisure and business travelers, conveniently situated 10 minutes from the airport and a 5 minutes from Benin Golf Course. Our 87 beautifully appointed guest room amenities include satellite TV, air-conditioning, telephone, work desk, hairdryer, electronic safes and tea, coffee making facilities. Enjoy hotel services at our restaurant, bar, spa, fitness center and swimming pool. Host meetings and events at our hotel where conference facilities allows 24 hour access to our business center and complimentary WiFi."
+            "description" : "Enjoy hotel services at our restaurant, bar, spa, fitness center and swimming pool. Host meetings and events at our hotel where conference facilities allows 24 hour access to our business center and complimentary WiFi."
         },
         {
             "name" : "Choice Gate",
             "address" : "G.R.A, 11, Nneka Street, Off Ugbor Rd, Benin City",
             "map" : "https://maps.app.goo.gl/owmTVYjzDuCQxEDj7",
             "phone" : "+234 803-386-9576",
+            "call" : "+2348033869576",
             "url" : "https://www.choicegatehotels.com/",
             "icon" : "images/directory/icons/choice-gate.webp",
             "level" : "gold",
-            "description" : "Choice Gate Hotel & Suites is dedicated to providing you with an unforgettable and luxurious stay. From the moment you step through the doors, you will be greeted by the warm and attentive staff, ready to cater to your every need. Indulge in the beautifully appointed rooms and suites, each thoughtfully designed to ensure your utmost comfort. Whether you're here for business or leisure, the hotel offers a perfect blend of modern amenities and timeless elegance."
+            "description" : "Indulge in the beautifully appointed rooms and suites, each thoughtfully designed to ensure your utmost comfort. Whether you're here for business or leisure, the hotel offers a perfect blend of modern amenities and timeless elegance."
         },
         {
             "name" : "Viewpoint",
             "address" : "1 Aiguobasinmwin Crescent, Benin City",
             "map" : "https://maps.app.goo.gl/ehDAjVi2AEUHhizn9",
             "phone" : "+234 902-444-9999",
+            "call" : "+2349024449999",
             "url" : "https://vpointhotel.com/",
             "icon" : "images/directory/icons/viewpoint.webp",
             "level" : "gold",
-            "description" : "VIEWPOINT HOTEL AND SUITES provides accommodations with a garden, free private parking, a restaurant and a bar. With free WiFi, this 5-star hotel offers room service and a 24-hour front desk. Some units at the property feature a balcony with a city view."
+            "description" : "We provides accommodations with a garden, free private parking, a restaurant and a bar. With free WiFi, this 5-star hotel offers room service and a 24-hour front desk. Some units at the property feature a balcony with a city view."
         },
         {
             "name" : "Randekhi Gold Wing",
             "address" : "8 Uhenuyi St, Oka, Benin City 300251, Edo",
             "map" : "https://maps.app.goo.gl/MMn6kNXS4LSLbxko7",
             "phone" : "+234 809-212-7611",
+            "call" : "+2348092127611",
             "url" : "http://www.randekhihotels.com/",
-            "icon" : "",
+            "icon" : "images/directory/icons/randekhi-gold.webp",
             "level" : "gold",
-            "description" : "Our bright and tastefully furnished rooms, which are decorated with modern interior designs and selected antique furniture, will make you feel good. The stunning views will make your stay unforgettable. The rooms boast nice views and all are en-suite. Naturally, air-conditioning, mini bar, internet access, telephone, TV, e.t.c are all there for your convenience."
+            "description" : "Our bright and tastefully furnished rooms, which are decorated with modern interior designs and selected antique furniture, will make you feel good. The stunning views will make your stay unforgettable. Visit and get a tasteful comfort."
         },
         {
             "name" : "Golden Tulip",
-            "address" : "23/27 Etete Road, Off Benin Sapele Rd, Benin City",
+            "address" : "23/27 Etete Road, Off Benin Sapele Rd, Benin City, Edo State",
             "map" : "https://maps.app.goo.gl/cwmY1SZt2qrNYtU26",
             "phone" : "+234 811-288-6798",
+            "call" : "+2348112886798",
             "url" : "https://www.tripadvisor.com/Hotel_Review-g298361-d1230652-Reviews-Golden_Tulip_Essential_Benin_City-Benin_City_Edo_State.html",
             "icon" : "images/directory/icons/golden-tulip.webp",
             "level" : "gold",
-            "description" : "Golden Tulip Essential Benin City is member of the Golden Tulip chain of Hotels Inns and Resorts. Operated as Excalibur Hotels in the last 13 years and is currently re-branded after the opening of an additional brand new block of 65 keys; comprising Apartments, 1,2,3 bedrooms suites as well as single rooms. Restaurants and Bars (up coming SPA) Gym, Meeting rooms, Banquet Hall etc."
-        },
-        {
-            "name" : "Hotel Adonai",
-            "address" : "359 Osahon Ikuobase Avenue, Limit Road, By Paulson British International School, Ugbor Rd, Benin City 300251, Edo",
-            "map" : "https://maps.app.goo.gl/qY17Sjjt5wEfWbgw9",
-            "phone" : "+234 811-289-3102",
-            "url" : "https://www.booking.com/hotel/ng/adonai.html",
-            "icon" : "images/directory/icons/hotel-adonai.webp",
-            "level" : "silver",
-            "description" : "HOTEL ADONAI has accommodations with a restaurant, free private parking and a bar. This 3-star hotel offers room service, a 24-hour front desk and free WiFi. The property provides a concierge service, and currency exchange for guests."
+            "description" : "Operated as Excalibur Hotels in the last 13 years and is currently re-branded after the opening of an additional brand new block of 65 keys; comprising Apartments, 1,2,3 bedrooms suites as well as single rooms."
         },
         {
             "name" : "Shamrockmanor",
-            "address" : "20 2nd Ugbor Rd, Oka, Benin City 300102, Edo",
+            "address" : "20 2nd Ugbor Road, Off Oka, Benin City 300102, Edo State",
             "map" : "https://maps.app.goo.gl/sqHiveD8ZogB9Qhf6",
             "phone" : "+234 807-646-8998",
+            "call" : "+2348076468998",
             "url" : "https://www.booking.com/hotel/ng/shamrockmanor-theresidence.en-gb.html",
             "icon" : "images/directory/icons/shamrock.webp",
             "level" : "silver",
-            "description" : "Shamrockmanor(TheResidence) has accommodations with a fitness center, free private parking, a garden and a shared lounge. Each room at the 5-star hotel has city views, and guests can enjoy access to a restaurant and to a bar. The property provides free shuttle service and room service for guests."
+            "description" : "We offer accommodations with a fitness center, free private parking, a garden and a shared lounge. Each room at our 5-star hotel has city views, and guests can enjoy access to a restaurant and to a bar."
+        },
+        {
+            "name" : "Hotel Adonai",
+            "address" : "359 Osahon Ikuobase Avenue, Limit Road, Ugbor Rd, Benin City 300251, Edo",
+            "map" : "https://maps.app.goo.gl/qY17Sjjt5wEfWbgw9",
+            "phone" : "+234 811-289-3102",
+            "call" : "+23481128931028",
+            "url" : "https://www.booking.com/hotel/ng/adonai.html",
+            "icon" : "images/directory/icons/hotel-adonai.webp",
+            "level" : "silver",
+            "description" : "Our 3-star hotel offers accommodations with a restaurant, free private parking and a bar, room service, a 24-hour front desk and free WiFi. The property provides a concierge service, and currency exchange for guests."
         },
         {
             "name" : "Morzi",
-            "address" : "",
-            "map" : "",
-            "phone" : "",
-            "url" : "",
-            "icon" : "",
-            "level" : "silver",
-            "description" : ""
+            "address" : "Plot 209 Ugbor, By, Ugbor Road Country Home Road, Junction, Benin City",
+            "map" : "https://maps.app.goo.gl/Rf7naK1kTgh8k8B3A",
+            "phone" : "+234 815-900-2022",
+            "call" : "+2348159002022",
+            "url" : "https://morzi-hotel-suites-benin-city.booked.net/",
+            "icon" : "images/directory/icons/morzi.webp",
+            "level" : "bronze",
+            "description" : "All guest rooms in our hotel are equipped with a flat-screen TV with cable channels. Some units at Morzi Hotel also boast a balcony. Guest rooms at the accommodation have air conditioning and a desk."
         }
     ]
 }
