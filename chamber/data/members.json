@@ -2,7 +2,7 @@
     "members" : [
         {
             "name" : "Protea",
-            "address" : "Off Benin Sapele Rd, Oka, Benin City 300251, Edo",
+            "address" : "Off Benin Sapele Rd, Oka, Benin City 300251, Edo State",
             "map" : "https://maps.app.goo.gl/wNZAYy9PPm3yiCZ96",
             "phone" : "+234 813-987-7770",
             "call" : "+2348139877770",
@@ -13,18 +13,18 @@
         },
         {
             "name" : "Choice Gate",
-            "address" : "G.R.A, 11, Nneka Street, Off Ugbor Rd, Benin City",
+            "address" : "G.R.A, 11, Nneka Street, Off Ugbor Rd, Benin City, Edo State",
             "map" : "https://maps.app.goo.gl/owmTVYjzDuCQxEDj7",
             "phone" : "+234 803-386-9576",
             "call" : "+2348033869576",
             "url" : "https://www.choicegatehotels.com/",
             "icon" : "images/directory/icons/choice-gate.webp",
             "level" : "gold",
-            "description" : "Indulge in the beautifully appointed rooms and suites, each thoughtfully designed to ensure your utmost comfort. Whether you're here for business or leisure, the hotel offers a perfect blend of modern amenities and timeless elegance."
+            "description" : "Indulge in the beautifully appointed rooms and suites, each thoughtfully designed to ensure your utmost comfort. Whether business or leisure, the hotel offers a perfect blend of modern amenities and timeless elegance."
         },
         {
             "name" : "Viewpoint",
-            "address" : "1 Aiguobasinmwin Crescent, Benin City",
+            "address" : "1 Aiguobasinmwin Crescent, Benin City, Edo State",
             "map" : "https://maps.app.goo.gl/ehDAjVi2AEUHhizn9",
             "phone" : "+234 902-444-9999",
             "call" : "+2349024449999",
@@ -35,14 +35,14 @@
         },
         {
             "name" : "Randekhi Gold Wing",
-            "address" : "8 Uhenuyi St, Oka, Benin City 300251, Edo",
+            "address" : "8 Uhenuyi St, Oka, Benin City 300251, Edo State",
             "map" : "https://maps.app.goo.gl/MMn6kNXS4LSLbxko7",
             "phone" : "+234 809-212-7611",
             "call" : "+2348092127611",
             "url" : "http://www.randekhihotels.com/",
             "icon" : "images/directory/icons/randekhi-gold.webp",
             "level" : "gold",
-            "description" : "Our bright and tastefully furnished rooms, which are decorated with modern interior designs and selected antique furniture, will make you feel good. The stunning views will make your stay unforgettable. Visit and get a tasteful comfort."
+            "description" : "Our bright and tastefully furnished rooms, which are decorated with modern interior designs and selected antique furniture, will make you feel good. The stunning views will make your stay unforgettable."
         },
         {
             "name" : "Golden Tulip",

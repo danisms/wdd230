@@ -211,52 +211,52 @@ ul {
     background: var(--primary-color);
     text-align: center;
     box-sizing: border-box;
-  }
-  
-  .month ul {
+}
+
+.month ul {
     margin: 0;
     padding: 0;
-  }
-  
-  .month ul li {
+}
+
+.month ul li {
     color: white;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
-  }
-  
-  .month .prev {
+}
+
+.month .prev {
     float: left;
     padding-top: 10px;
-  }
-  
-  .month .next {
+}
+
+.month .next {
     float: right;
     padding-top: 10px;
-  }
-  
-  .weekdays {
+}
+
+.weekdays {
     margin: 0;
     padding: 10px 0;
     background-color: #ddd;
-  }
-  
-  .weekdays li {
+}
+
+.weekdays li {
     display: inline-block;
     width: 13.6%;
     color: black;
     text-align: center;
-  }
-  
-  .days {
+}
+
+.days {
     padding: 10px 0;
     background: #eee;
     margin: 0;
     /* height: 43%; */
     box-sizing: border-box;
-  }
-  
-  .days li {
+}
+
+.days li {
     list-style-type: none;
     display: inline-block;
     width: 13.6%;
@@ -264,13 +264,13 @@ ul {
     margin-bottom: 5px;
     font-size:12px;
     color: black;
-  }
-  
-  .days li .active {
+}
+
+.days li .active {
     padding: 5px;
     background: var(--primary-color);
     color: white
-  }
+}
 
 .discover-text {
     background-color: var(--accent-four);
@@ -281,7 +281,7 @@ ul {
 
 /* DIRECTORY */
 /*
-<main>
+<main id="directory-main">
     <div id="main-overlay">
         <div id="directory-grid-list-display">
             <button id="directory-list">≣</button>
@@ -294,10 +294,20 @@ ul {
 </main>
 */
 
+/* #directory-main {
+    background-color: var(--primary-color);
+} */
+
+#directory-overlay {
+    padding: 0;
+    margin: 0;
+    background-color: var(--primary-color);
+}
+
 #directory-grid-list-display {
     width: 100%;
     padding: 1rem;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color2);
     display: flex;
     justify-content: center;
     box-sizing: border-box;
@@ -308,23 +318,19 @@ ul {
     height: fit-content;
     padding: 0.5rem 1rem;
     box-sizing: border-box;
-    font-size: 3em;
+    font-size: 2em;
     background-color: var(--accent-one);
     color: var(--primary-color);
     text-align: center;
     margin-right: 1rem;
     border: 0;
 }
-#directory-overlay {
-    padding: 0;
-    margin: 0;
-    background-color: var(--accent-three);
-}
 
-#directory {
+/* Directory Grid Display */
+#directory.grid {
     margin: 0;
     padding: 0;
-    background-color: var(--accent-three);
+    background-color: var(--primary-color);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1rem;
@@ -333,80 +339,151 @@ ul {
     box-sizing: border-box;
 }
 
-#directory section {
-    background-color: var(--primary-color);
+#directory.grid > a .card {
+    background-color: var(--primary-color2);
     margin: 1rem;
     /* width: fit-content; */
-    box-shadow: 0 0 15px var(--primary-color);
+    box-shadow: 0 0 15px var(--accent-three);
     font-size: 1em;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
-#directory .icon-holder {
+#directory.grid .icon-holder {
     width: fit-content;
     margin: 0 auto;
     border: 1px solid var(--accent-one);
     background-color: black;
 }
 /* membership level/status */
-#directory section .status {
+#directory.grid section .status {
     width: fit-content;
-    font-size: 1.5em;
-    background-color: black;
+    font-size: 1.2;
+    /* background-color: black; */
     color: white;
     border-radius: 5px;
     position: relative;
     float: right;
     text-transform: capitalize;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: (var(--heading-font-one));
     font-weight: bold;
 }
-#directory section .status-gold {
+#directory.grid section .status-gold {
     background-color: #ff9100;
     color:rgba(0, 0, 0, 0.8);
     padding: .5rem;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    box-shadow: 0 0 10px #ff9100;
+    border-radius: 10px;
 }
-#directory section .status-silver {
+#directory.grid section .status-silver {
     background-color: silver;
     color:rgba(0, 0, 0, 0.8);
     padding: .5rem;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    box-shadow: 0 0 10px silver;
+    border-radius: 10px;
 }
-#directory section .status-bronze {
+#directory.grid section .status-bronze {
     background-color: brown;
     color: white;
     padding: .5rem;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    box-shadow: 0 0 10px brown;
+    border-radius: 10px;
 }
 
-#directory span {
+#directory.grid span {
     display: block;
     font-family: var(--heading-font-two);
     text-align: center;
+    margin: .5rem 0;
 }
-#directory h2 {
+#directory.grid h2 {
     color: var(--accent-one);
     font-family: var(--heading-font-one);
     font-size: 1.5em;
     margin: 0.5rem;
 }
-#directory section .description {
-    border: 1px solid var(--accent-one);
+#directory.grid .map-address {
+    display: none;
+}
+
+#directory.grid section .description {
+    background-color: var(--primary-color2);
+    margin: 1rem;
+    font-size: 1em;
+    box-sizing: border-box;
+    border-radius: 10px;
     /* width: 300px; */
     margin: 0 auto;
 }
-#directory p {
+#directory.grid p {
     color: var(--accent-three);
 }
 
+/* Directory List Display */
+#directory.list {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#directory.list section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+#directory.list > .card-link {
+    background-color: var(--primary-color2);
+}
+
+#directory.list > .card-link:nth-child(even){
+    background-color: var(--primary-color4);
+}
+
+#directory.list .icon-holder {
+    display: none;
+}
+/* membership level/status */
+#directory.list section .status {
+    display: none;
+}
+
+#directory.list span {
+    display: block;
+    font-family: var(--heading-font-two);
+    text-align: center;
+}
+#directory.list h2 {
+    color: var(--accent-one);
+    font-family: var(--heading-font-two);
+    font-size: 1.2em;
+    margin: 0.5rem;
+}
+#directory.list .address {
+    display: none;
+}
+#directory.list .map-address {
+    display: block;
+}
+#directory.list section .description {
+    display: none;
+}
+
+
+/* Empty Directory Display */
 #directory-empty {
     height: 80vh;
     align-content: center;
@@ -975,6 +1052,37 @@ ul {
     .discover-description span {
         color: var(--accent-three);
     }
+
+    /* DIRECTORY PAGE STYLING */
+    /* DIRECTORY PAGE STYLING */
+    /* DIRECTORY PAGE STYLING */
+    #directory.list section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+    #directory.list section .site {
+        display: none;
+    }
+}
+
+/* SMALLER SCREEN FOR PHONE */
+@media (max-width: 428px) {
+    /* DIRECTORY PAGE STYLING */
+    /* DIRECTORY PAGE STYLING */
+    /* DIRECTORY PAGE STYLING */
+    #directory.list section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    #directory.list section .phone {
+        display: none;
+    }
+    #directory.list section .site {
+        display: none;
+    }
+    
 }
 
 /* ANIMATIONS */

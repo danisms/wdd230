@@ -224,6 +224,7 @@ function displayDirectory(data) {
             let name = document.createElement('h2');
             let phone = document.createElement('span');
             let address = document.createElement('span');
+            let addressToMap = document.createElement('span');
             let site = document.createElement('span');
             let description = document.createElement('section');
             let membership = document.createElement('div');
@@ -244,15 +245,17 @@ function displayDirectory(data) {
             // Name
             name.innerHTML = memberName;
             // Phone
-            phone.setAttribute('class', 'other-info');
+            phone.setAttribute('class', 'phone');
             phone.innerHTML = `<a href="tel:${memberCallLine}">${memberPhone}</a>`;
             // Address
-            address.setAttribute('class', 'other-info');
+            address.setAttribute('class', 'address');
             address.innerHTML = `<a href="${mapLink}">${memberAddress}`;
+            // Address to map
+            addressToMap.setAttribute('class', 'map-address');
+            addressToMap.innerHTML = `<a href="${mapLink}">View Direction`;
             // Site
-            site.setAttribute('class', 'other-info');
             site.setAttribute('class', 'site');
-            site.innerHTML = `<a href="${memberSite} target="_blank"">Visit-Site</a>`;
+            site.innerHTML = `<a href="${memberSite}" target="_blank">Visit-Site</a>`;
             // Description
             description.setAttribute('class', 'description');
             description.innerHTML = `<p>${memberDescription}</p>`;
@@ -272,6 +275,7 @@ function displayDirectory(data) {
             }
 
             // Anchor
+            anchor.setAttribute('class', 'card-link');
             anchor.setAttribute('href', `${memberSite}`);
             anchor.setAttribute('target', '_blank');
 
@@ -287,11 +291,13 @@ function displayDirectory(data) {
             iconHolder.setAttribute('class', 'icon-holder');
             iconHolder.appendChild(logoIcon);
             
-            // append child to parent element
+            // append child to parent 
+            card.setAttribute('class', 'card')
             card.appendChild(membership);
             card.appendChild(iconHolder);
             card.appendChild(name);
             card.appendChild(address);
+            card.appendChild(addressToMap);
             card.appendChild(phone);
             card.appendChild(site);
             card.appendChild(description);
@@ -309,6 +315,20 @@ function displayDirectory(data) {
 }
 
 getData(filepath);
+
+// Toggle view
+const girdView = document.querySelector('#directory-grid');
+const listView = document.querySelector('#directory-list')
+
+girdView.addEventListener('click', ()=> {
+    directory.classList.add('grid');
+    directory.classList.remove('list');
+})
+
+listView.addEventListener('click', ()=> {
+    directory.classList.add('list');
+    directory.classList.remove('grid');
+})
 
 // get and set last modification date
 const copyDateEle = document.querySelector('#footer-current-date');
