@@ -333,6 +333,60 @@ setTimeout(() => {
     }, 3500);
 }, 3700);
 
+// DYNAMICALLY DISPLAY WEATHER INFO
+// Get All Elements
+
+// current weather elements
+const areaEle = document.querySelector('#area');
+const currentTemEle = document.querySelector('#current-temp');
+const weatherDescEle = document.querySelector('#weather-description');
+const weatherIconEle = document.querySelector('#weather-icon');
+const humidityEle = document.querySelector('#humidity');
+const windSpeedEle = document.querySelector('#wind-speed');
+
+// temperature day elements
+const day1TimeEle = document.querySelector('#day1-time');
+const day2TimeEle = document.querySelector('#day2-time');
+const day3TimeEle = document.querySelector('#day3-time');
+
+const day1TempEle = document.querySelector('#temp-day1');
+const day2TempEle = document.querySelector('#temp-day2');
+const day3TempEle = document.querySelector('#temp-day3');
+
+
+// api url
+const url = "api.openweathermap.org/data/2.5/forecast?lat=6.34&lon=5.59&appid=495e0aa10247327f0515804ac3f3454a";
+
+async function apiFetch(url)
+{
+    try {
+        let response = await fetch(url);
+        if (response.ok) {
+            let data = await response.json();
+            // console.log(data);  // testing purpose only;
+            displayResults(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (err)
+    {
+        console.log(err)
+    }
+}
+
+function displayResults(data)
+{
+    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+    const iconSrc = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
+    let desc = data.weather[0].description;
+    weatherIcon.setAttribute('src', iconSrc);
+    weatherIcon.setAttribute('alt', desc);
+    captionDesc.textContent = `${desc}`;
+}
+
+apiFetch(url);
+
+
 // get and set last modification date
 const copyDateEle = document.querySelector('#footer-current-date');
 const lastModifiedEle = document.querySelector('#last-update');
