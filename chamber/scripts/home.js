@@ -333,6 +333,171 @@ setTimeout(() => {
     }, 3500);
 }, 3700);
 
+// DYNAMICALLY CREATE COMPANY'S ADVERTS
+const spotlight = document.getElementById('spotlight');
+
+// get json member file
+// api url
+const filepath = 'data/members.json';
+
+async function getData(path)
+{
+    try {
+        let response = await fetch(path);
+        if (response.ok) {
+            let data = await response.json();
+            // console.log(data);  // testing purpose only;
+            displayspotlight(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (err)
+    {
+        console.log(err)
+    }
+}
+
+function displayspotlight(data) {
+    // console.log(data);  // for testing purpose
+    if (data.members.length > 0) {
+        // console.log("data not empty");  // for testing purpose
+
+        // display data in spotlight
+        let membersList = data.members;
+        // create a list of members with gold or silver membership
+        let goldSilverMembers = [];
+        membersList.forEach((member) => {
+            if (member.level.toLowerCase() == "gold" || member.level.toLowerCase() == "silver") {
+                goldSilverMembers.push(member);
+            }
+        });
+        // generate 3 unique random number that is equal to the length of the goldSilverMembers
+        const maxNum = 3;
+        let uniqueRandomNumbers = [];
+        // console.log(goldSilverMembers.length);  // for testing purpose
+
+        while(uniqueRandomNumbers.length < maxNum) {
+            let randomNum = Math.floor(Math.random() * goldSilverMembers.length);
+            let numberIn = false;
+            if (uniqueRandomNumbers.length > 0)
+            {
+                uniqueRandomNumbers.forEach((number) => {
+                    if (randomNum == number){
+                        numberIn = true;
+                    }
+                })
+
+                if (!numberIn) {
+                    uniqueRandomNumbers.push(randomNum);
+                    // console.log(randomNum);  // for testing purpose
+                } else {
+                    // pass
+                }
+            } else {
+                uniqueRandomNumbers.push(randomNum);
+            }
+        }
+        // console.log(uniqueRandomNumbers);  // for testing purpose
+
+        // generate advert cards for members in goldsiver list using unique random numbers list
+        uniqueRandomNumbers.forEach(number => {
+            let member = goldSilverMembers[number];
+            // create elements
+            let card = document.createElement('section');
+            let iconHolder = document.createElement('div');
+            let logoIcon = document.createElement('img');
+            let name = document.createElement('h2');
+            let phone = document.createElement('span');
+            let address = document.createElement('span');
+            let addressToMap = document.createElement('span');
+            let site = document.createElement('span');
+            let description = document.createElement('section');
+            let membership = document.createElement('div');
+            let anchor = document.createElement('a');
+
+            // get values
+            let memberName = member.name;
+            let memberAddress = member.address;
+            let mapLink = member.map;
+            let memberPhone = member.phone;
+            let memberCallLine = member.call;
+            let memberSite = member.url;
+            let memberLogo = member.icon;
+            let memberDescription = member.description;
+            let memberLevel = member.level;
+
+            // populating the elements
+            // Name
+            name.innerHTML = memberName;
+            // Phone
+            phone.setAttribute('class', 'phone');
+            phone.innerHTML = `<a href="tel:${memberCallLine}">${memberPhone}</a>`;
+            // Address
+            address.setAttribute('class', 'address');
+            address.innerHTML = `<a href="${mapLink}">${memberAddress}`;
+            // Address to map
+            addressToMap.setAttribute('class', 'map-address');
+            addressToMap.innerHTML = `<a href="${mapLink}">View Direction`;
+            // Site
+            site.setAttribute('class', 'site');
+            site.innerHTML = `<a href="${memberSite}" target="_blank">Visit-Site</a>`;
+            // Description
+            description.setAttribute('class', 'description');
+            description.innerHTML = `<p>${memberDescription}</p>`;
+            // membership status
+            if (memberLevel == 'gold') {
+                membership.setAttribute('class', 'status');
+                membership.innerHTML = `<span class="status-gold">${memberLevel}</span>`;
+            } else if (memberLevel == 'silver') {
+                membership.setAttribute('class', 'status');
+                membership.innerHTML = `<span class="status-silver">${memberLevel}</span>`
+            } else if (memberLevel == 'bronze') {
+                membership.setAttribute('class', 'status');
+                membership.innerHTML = `<span class="status-bronze">${memberLevel}</span>`
+            } else {
+                membership.setAttribute('class', 'status');
+                membership.innerHTML = `<span class="status-free">${memberLevel}</span>`
+            }
+
+            // Anchor
+            anchor.setAttribute('class', 'card-link');
+            anchor.setAttribute('href', `${memberSite}`);
+            anchor.setAttribute('target', '_blank');
+
+
+            // Image
+            logoIcon.setAttribute('src', memberLogo);
+            logoIcon.setAttribute('alt', `log of ${memberName} hotel`);
+            logoIcon.setAttribute('loading', 'lazy');
+            logoIcon.setAttribute('width', '150');
+            logoIcon.setAttribute('height', '150');
+
+            // Image Holder
+            iconHolder.setAttribute('class', 'icon-holder');
+            iconHolder.appendChild(logoIcon);
+            
+            // append child to parent 
+            card.setAttribute('class', 'card')
+            card.appendChild(membership);
+            card.appendChild(iconHolder);
+            card.appendChild(name);
+            card.appendChild(address);
+            card.appendChild(addressToMap);
+            card.appendChild(phone);
+            card.appendChild(site);
+            card.appendChild(description);
+
+            // add card to anchor so as to visit site onclick
+            anchor.appendChild(card);
+
+            spotlight.appendChild(anchor);
+        });
+    }
+}
+
+getData(filepath);
+
+
 // DYNAMICALLY DISPLAY WEATHER INFO
 // Get All Elements
 
@@ -344,18 +509,13 @@ const weatherIconEle = document.querySelector('#weather-icon');
 const humidityEle = document.querySelector('#humidity');
 const windSpeedEle = document.querySelector('#wind-speed');
 
-// temperature day elements
-const day1TimeEle = document.querySelector('#day1-time');
-const day2TimeEle = document.querySelector('#day2-time');
-const day3TimeEle = document.querySelector('#day3-time');
-
-const day1TempEle = document.querySelector('#temp-day1');
-const day2TempEle = document.querySelector('#temp-day2');
-const day3TempEle = document.querySelector('#temp-day3');
+// temperature date elements
+const futureTempDateEle = document.querySelector('#future-temp-date');
+const futureTempEle = document.querySelector('#future-temp');
 
 
 // api url
-const url = "api.openweathermap.org/data/2.5/forecast?lat=6.34&lon=5.59&appid=495e0aa10247327f0515804ac3f3454a";
+const url = "https://api.openweathermap.org/data/2.5/forecast?lat=6.34&lon=5.59&units=metric&appid=495e0aa10247327f0515804ac3f3454a";
 
 async function apiFetch(url)
 {
@@ -376,12 +536,27 @@ async function apiFetch(url)
 
 function displayResults(data)
 {
-    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
-    const iconSrc = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
-    let desc = data.weather[0].description;
-    weatherIcon.setAttribute('src', iconSrc);
-    weatherIcon.setAttribute('alt', desc);
-    captionDesc.textContent = `${desc}`;
+    // update weather location
+    areaEle.innerHTML = `${data.city.name}, ${data.city.country}`;
+    // update current weather info
+    currentTemEle.innerHTML = `${data.list[0].main.temp} ℃`;
+    let iconSrc = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
+    let desc = data.list[0].weather[0].description;
+    weatherDescEle.textContent = `${desc}`;
+    weatherIconEle.setAttribute('src', iconSrc);
+    weatherIconEle.setAttribute('alt', desc);
+    humidityEle.innerHTML = `${data.list[0].main.humidity} g/kg`;
+    windSpeedEle.innerHTML = `${data.list[0].wind.speed} m/s`;
+
+    // udate daily temperature for 3 days
+    // get date
+    const timestamp = data.list[24].dt + "000";
+    let getDateValue = new Date(parseInt(timestamp));
+    let extimatedDate = getDateValue.toDateString();
+
+    futureTempDateEle.innerHTML = `${extimatedDate}`;
+    // udate temperature
+    futureTempEle.innerHTML = `${data.list[24].main.temp} ℃`;
 }
 
 apiFetch(url);

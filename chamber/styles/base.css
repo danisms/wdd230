@@ -179,6 +179,46 @@ a {
     text-decoration: none;
     color: var(--accent-three);
 }
+/* HEADER */
+#page-header {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    align-content: center;
+}
+
+#page-header video {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* opacity: 0.4; */
+}
+
+#page-header #header-intro {
+    width: 100%;
+    height: 100%;
+    /* height: 35vh; */
+    background-color: var(--primary-color2);
+    grid-column: 1/2;
+    grid-row: 1/2;
+    box-sizing: border-box;
+    top: 0;
+    align-content: center;
+}
+
+#page-header #header-intro a {
+    color: var(--primary-color);
+}
+
+#page-header #header-overlay,
+#page-header #header-overlay {
+    height: auto;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
 
 #call-to-action-btn {
     width: fit-content;
@@ -218,6 +258,108 @@ a {
 }
 #event-control-box {
     display: none;
+}
+
+/* HOME ADVERT SECTION */
+#spotlight {
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#spotlight > a .card {
+    background-color: var(--primary-color2);
+    margin: 1rem;
+    /* width: fit-content; */
+    box-shadow: 0 0 15px var(--accent-three);
+    font-size: 1em;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#spotlight .icon-holder {
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid var(--accent-one);
+    background-color: black;
+}
+/* membership level/status */
+#spotlight section .status {
+    width: fit-content;
+    /* background-color: black; */
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    text-transform: capitalize;
+    /* overflow: hidden; */
+    font-family: var(--heading-font-one);
+    font-weight: bold;
+}
+#spotlight section .status-gold {
+    background-color: #ff9100;
+    color:rgba(0, 0, 0, 0.8);
+    padding: .5rem;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px #ff9100;
+    border-radius: 10px;
+}
+#spotlight section .status-silver {
+    background-color: silver;
+    color:rgba(0, 0, 0, 0.8);
+    padding: .5rem;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px silver;
+    border-radius: 10px;
+}
+
+#spotlight span {
+    display: block;
+    font-family: var(--heading-font-two);
+    text-align: center;
+    margin: .5rem 0;
+}
+#spotlight h2 {
+    color: var(--accent-one);
+    font-family: var(--heading-font-one);
+    font-size: 1.5em;
+    margin: 0.5rem;
+}
+#spotlight .map-address {
+    display: none;
+}
+
+#spotlight section .description {
+    background-color: var(--primary-color2);
+    margin: 1rem;
+    font-size: 1em;
+    box-sizing: border-box;
+    border-radius: 10px;
+    /* width: 300px; */
+    margin: 0 auto;
+}
+#spotlight p {
+    color: var(--accent-three);
+}
+
+/* Home Weather Section */
+#info-graph .weather-info {
+    font-weight: normal;
+    text-align: center;
+}
+
+#info-graph #weather-box {
+    text-align: center;
 }
 
 /* Calender */
@@ -321,45 +463,6 @@ ul {
 /* #directory-main {
     background-color: var(--primary-color);
 } */
-
-#directory-header {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    align-items: center;
-    align-content: center;
-}
-
-#directory-header video {
-    width: 100%;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    /* opacity: 0.4; */
-}
-
-#directory-header #header-intro {
-    width: 100%;
-    height: 100%;
-    /* height: 35vh; */
-    background-color: var(--primary-color2);
-    grid-column: 1/2;
-    grid-row: 1/2;
-    box-sizing: border-box;
-    top: 0;
-    align-content: center;
-}
-
-#directory-header #header-intro a {
-    color: var(--primary-color);
-}
-
-#directory-header #header-overlay {
-    height: auto;
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
 
 #directory-overlay {
     padding: 0;
@@ -873,30 +976,30 @@ ul {
     }
 
     /* SPORT LIGHT SECTION */
-    main #card-3 #spotlight {
-        display: grid;
-        grid-template-columns: 1fr 200px 1fr;
-        grid-template-rows: 1fr;
+    /* main #card-3 #spotlight {
+        display: flex;
+        overflow: auto;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 1rem;
         padding: 1rem;
         align-content: center;
         border: 1px solid var(--primary-color);
         background-color: var(--accent-three);
-    }
+    } */
 
-    #spotlight #advertisement-box{
+    /* #spotlight .advertisement-box{
         grid-column: 1/4;
-        grid-row: 1/2;
         display: grid;
         opacity: 1;
         border: 1px dotted var(--primary-color);
     }
-    #advertisement-box img {
+    .advertisement-box img {
         grid-column: 1/2;
         grid-row: 1/2;
-        width: 100%;
-        height: 50vh;
+        height: auto;
     }
-    #advertisement-box section {
+    .advertisement-box section {
         grid-column: 1/2;
         grid-row: 1/2;
         opacity: 1;
@@ -904,21 +1007,13 @@ ul {
         background-color: var(--primary-color3);
         border: none;
     }
-    #advertisement h3 {
+    .advertisement h3 {
         text-align: center;
         color: var(--accent-three);
     }
-    #advertisement p {
+    .advertisement p {
         color: var(--accent-three);
-    }
-    
-    #spotlight video {
-        /* grid-column: 2/4;
-        grid-row: 1/2;
-        width: 100%;
-        align-self: center; */
-        display: none;
-    }
+    } */
 
     /* WEATHER INFO */
     #card-4 {
@@ -1121,11 +1216,13 @@ ul {
     /* DIRECTORY PAGE STYLING */
     /* DIRECTORY PAGE STYLING */
     /* DIRECTORY PAGE STYLING */
-    #directory-header #header-intro {
+    #page-header
+ #header-intro {
         font-size: .9em;
         padding-top: 5rem;
     }
-    #directory-header #header-intro a {
+    #page-header
+ #header-intro a {
         width: fit-content;
         height: fit-content;
         padding: .5rem 1.5rem;
@@ -1146,11 +1243,13 @@ ul {
     /* DIRECTORY PAGE STYLING */
     /* DIRECTORY PAGE STYLING */
     /* DIRECTORY PAGE STYLING */
-    #directory-header #header-intro {
+    #page-header
+ #header-intro {
         font-size: 0.8em;
         padding-top: 5rem;
     }
-    #directory-header #header-intro a {
+    #page-header
+ #header-intro a {
         width: fit-content;
         height: fit-content;
         /* padding: .8rem; */

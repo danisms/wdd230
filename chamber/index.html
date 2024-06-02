@@ -54,13 +54,13 @@
                 <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
-        <header>
-            <img src="images/hotel-banner.webp" alt="hotel exterior">
+        <header id="page-header">
+            <video src="video/advert/Best-Modern-Bedroom.mp4" autoplay loop muted></video>
             <div id="header-overlay" class="overlay"></div>
             <div id="header-intro">
                 <h1 id="head-title">Benin Hotel Chamber of Commerce</h1>
                 <h2 id="head-motto">Connecting Hospitality, Driving Growth</h2>
-                <a href="join.html"><button id="call-to-action-btn">JOIN</button></a>
+                <a id="call-to-action-btn" href="join.html">JOIN</a>
             </div>
         </header>
         <main>
@@ -179,31 +179,24 @@
                 <section id="card-3">
                     <h2 class="h2-headers">Spotlight</h2>
                     <div id="spotlight">
-                        <div id="advertisement-box" onmouseover="changeVisibility('advertisement', '1')" onmouseleave="changeVisibility('advertisement', '0.8')">
-                            <img src="images/hotel.jpg" alt="an hotel">
-                            <section id="advertisement">
-                                <h3>Advert Description</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, unde sint! Dolor iste laudantium debitis, ex aspernatur beatae quidem officia velit et, ab modi saepe tenetur doloremque! Ullam, aspernatur numquam?</p>
-                            </section>
-                        </div>
-                        <video src="video/advert/Best-Modern-Bedroom.mp4" controls autoplay muted></video>
+                    <!--Dynamically Load Data-->
                     </div>
                 </section>
                 <section id="card-4">
                     <h2 class="h2-headers">Weather Info</h2>
                     <div id="info-graph"> 
                         <div id="weather-box">
-                            Area: <span id="area" class="weather-info">Nigeria, Benin</span><br><br>
+                            AREA<br>
+                            <span id="area" class="weather-info">Nigeria, Benin</span><br><br>
                             <!--Current weather info-->
                             CURRENT WEATHER<br>
-                            <span id="current-temp" class="weather-info">35℃ - </span><span id="weather-description" class="weather-info">Normal</span><span id="weather-icon">☪️</span><br>
-                            Humidity: <span id="humidity" class="weather-info">35%</span><br>
-                            Wind Speed: <span id="wind-speed" class="weather-info">NAN</span><br><br>
+                            <img id="weather-icon" src="images/" alt="weather icon" width="50" height="50">
+                            <span id="current-temp" class="weather-info">NAN</span> - <span id="weather-description" class="weather-info">Normal</span><br>
+                            <span class="weather-info">Humidity : </span><span id="humidity" class="weather-info">NAN</span><br>
+                            <span class="weather-info">Wind-Speed : </span><span id="wind-speed" class="weather-info">NAN</span><br><br>
 
-                            TEMPERATURE<br>
-                            <span id="day1-time">DAY 1</span> : <span id="temp-day1" class="weather-info">35</span><br>
-                            <span id="day2-time">DAY 2</span> : <span id="temp-day2" class="weather-info">35</span><br>
-                            <span id="day3-time">DAY 3</span> : <span id="temp-day3" class="weather-info">35</span><br><br>
+                            TEMPERATURE (3 Days After)<br>
+                            <span id="future-temp-date" class="weather-info">DATE</span> : <span id="future-temp" class="weather-info">NAN</span><br>
                         </div>
                     </div>
                 </section>
