@@ -561,6 +561,37 @@ function displayResults(data)
 
 apiFetch(url);
 
+// HOME INVITE BANNER
+/*
+html structure
+<div id="invite-banner">
+    <div id="close-invite-banner"><spand id="invite-close-btn">⨉</span></div>
+    <h3>Invitation</h3>
+    <p>You are invited to attend the Benin Hotel Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
+</div>
+*/
+// get elements
+const inviteBanner = document.querySelector("#invite-banner");
+const inviteCloseBtn = document.querySelector("#invite-close-btn");
+
+// display invite banner only on specific days
+(function displayBannerInvite() {
+    const inviteDays = [1, 2, 3];  // 1=monday, 2=tuesday ...
+    let currentDateAndTime = new Date();
+    let currendDay = currentDateAndTime.getDay();
+    // console.log(currendDay);  // for testing purpose
+    inviteDays.forEach((day)=> {
+        if (currendDay == day){
+            inviteBanner.style.display = 'block';
+        }
+    })
+})();
+
+// close invite banner
+inviteCloseBtn.addEventListener('click', ()=> {
+    inviteBanner.style.display = 'none';
+})
+
 
 // get and set last modification date
 const copyDateEle = document.querySelector('#footer-current-date');

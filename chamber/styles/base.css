@@ -366,13 +366,45 @@ a {
 /* page structure */
 /*
 <div id="invite-banner">
-    <div id="close-invite-banner">⨉</div>
+    <div id="close-invite-banner"><spand id="invite-close-btn">⨉</span></div>
     <h3>Invitation</h3>
     <p>You are invited to attend the Benin Hotel Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
 </div>
 */
 #invite-banner {
-    
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--primary-color4);
+    color: var(--accent-three);
+    padding: .5rem 2rem 2rem 2rem;
+    box-sizing: border-box;
+    bottom: 0;
+    animation-name: slide-in;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    display: none;
+}
+#invite-banner #close-invite-banner {
+    width: 100%;
+    text-align: right;
+    float: right;
+    font-size: 1.5em;
+    margin: 0;
+}
+#invite-banner #close-invite-banner #invite-close-btn {
+    cursor: pointer;
+}
+#invite-banner h3 {
+    color: var(--accent-three);
+    text-align: center;
+    text-shadow: 1px 2px black;
+}
+#invite-banner p {
+    color: var(--accent-three);
+    text-shadow: 1px 2px black;
+    font-size: .9em;
+    text-align: center;
 }
 
 /* Calender */
@@ -1230,12 +1262,12 @@ ul {
     /* DIRECTORY PAGE STYLING */
     /* DIRECTORY PAGE STYLING */
     #page-header
- #header-intro {
+    #header-intro {
         font-size: .9em;
         padding-top: 5rem;
     }
     #page-header
- #header-intro a {
+    #header-intro a {
         width: fit-content;
         height: fit-content;
         padding: .5rem 1.5rem;
@@ -1298,6 +1330,15 @@ ul {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        bottom: -100%;
+    }
+    100% {
+        bottom: 0;
     }
 }
 
