@@ -257,8 +257,8 @@
     /* MAIN */
     main {
         /* padding: 1rem; */
-        display: grid;
-        grid-template-columns: 1fr;
+        /* display: grid; */
+        /* grid-template-columns: 1fr; */
         /* row-gap: 1rem; */
         /* background: url("../images/hotel-banner-2.png"); */
         background-size: contain;

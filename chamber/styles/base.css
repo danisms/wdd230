@@ -362,6 +362,19 @@ a {
     text-align: center;
 }
 
+/* Home Meet and Greet Invitation Banner */
+/* page structure */
+/*
+<div id="invite-banner">
+    <div id="close-invite-banner">⨉</div>
+    <h3>Invitation</h3>
+    <p>You are invited to attend the Benin Hotel Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
+</div>
+*/
+#invite-banner {
+    
+}
+
 /* Calender */
 #discover-calender {
     width: 100%;
@@ -826,9 +839,9 @@ ul {
         /* background: url(../images/hotel-banner-2.png); */
         /* padding: 1rem; */
         background-color: var(--primary-color3);
-        display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 1rem;
+        /* display: grid; */
+        /* grid-template-columns: 1fr; */
+        /* row-gap: 1rem; */
     }
     main #main-overlay {
         background-color: rgba(0, 0, 0, 0.8);
