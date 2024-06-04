@@ -6,6 +6,7 @@
     --primary-color4: rgba(0, 0, 0, 0.8);
     --secondary-color: #3c6997;
     --accent-one: #ff9100;
+    /* --accent-one: #ffb452; */
     --accent-two: #5ADBFF;
     --accent-three: #f8f9fd;
     --accent-four: rgb(236, 241, 255);
@@ -414,6 +415,16 @@ a {
     text-align: center;
 }
 
+/* Home Footer */
+footer .footer-slogan {
+    font-family: var(--heading-font-two);
+    color: var(--headline-color-on-white);
+    /* text-shadow: 1px 1px 1px var(--accent-two); */
+    margin: 0;
+    padding: 0;
+    line-height: 2rem;
+}
+
 /* Calender */
 #discover-calender {
     width: 100%;
@@ -598,7 +609,7 @@ ul {
 }
 #directory.grid section .status-silver {
     background-color: silver;
-    color:rgba(0, 0, 0, 0.8);
+    color: black;
     padding: .5rem;
     width: 100%;
     height: 100%;
@@ -961,7 +972,7 @@ ul {
     }
     #scroll-layer-1 section img {
         width: 100%;
-        height: 200px;
+        height: auto;
         margin: 0;
     }
     #scroll-layer-1 section h3 {
@@ -1118,7 +1129,7 @@ ul {
         width: 25px;
         height: 25px;
     }
-    footer h3 {
+    footer h3, footer .footer-slogan {
         color: var(--accent-three);
         font-size: 0.9em;
         margin: 0.5rem;
@@ -1229,6 +1240,8 @@ ul {
         overflow: hidden;
         width: 100%;
         height: auto;
+        box-sizing: border-box;
+
     }
     .a-discover-block picture {
         width: 100%;
@@ -1244,12 +1257,12 @@ ul {
         grid-column: 1/2;
         grid-row: 1/2;
         align-content: center;
-        padding: 1rem;
+        padding: .5rem;
         box-sizing: border-box;
         width: 100%;
-        height: 40%;
+        height: fit-content;
         position: relative;
-        top: 60%;
+        align-self: end;
         transition: top 0.8s, left 0.8s;
         background: linear-gradient(var(--primary-color4), var(--primary-color));
 

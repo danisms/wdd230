@@ -402,8 +402,8 @@ function displayCurrentEvent(data) {
                 poster.setAttribute('src', event.poster);
                 poster.setAttribute('alt', event.title);
                 poster.setAttribute('loading', 'lazy');
-                // poster.setAttribute('width', '400');
-                // poster.setAttribute('height', '400');
+                poster.setAttribute('width', '400');
+                poster.setAttribute('height', '400');
 
                 // event description
                 let eventDescription = document.createElement('event-description');
@@ -693,14 +693,14 @@ function displayResults(data)
     humidityEle.innerHTML = `${data.list[0].main.humidity} g/kg`;
     windSpeedEle.innerHTML = `${data.list[0].wind.speed} m/s`;
 
-    // udate daily temperature for 3 days
+    // update daily temperature for 3 days
     // get date
     const timestamp = data.list[24].dt + "000";
     let getDateValue = new Date(parseInt(timestamp));
-    let extimatedDate = getDateValue.toDateString();
+    let estimatedDate = getDateValue.toDateString();
 
-    futureTempDateEle.innerHTML = `${extimatedDate}`;
-    // udate temperature
+    futureTempDateEle.innerHTML = `${estimatedDate}`;
+    // update temperature
     futureTempEle.innerHTML = `${data.list[24].main.temp} ℃`;
 }
 
@@ -710,7 +710,7 @@ apiFetch(url);
 /*
 html structure
 <div id="invite-banner">
-    <div id="close-invite-banner"><spand id="invite-close-btn">⨉</span></div>
+    <div id="close-invite-banner"><span id="invite-close-btn">⨉</span></div>
     <h3>Invitation</h3>
     <p>You are invited to attend the Benin Hotel Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
 </div>
@@ -723,10 +723,10 @@ const inviteCloseBtn = document.querySelector("#invite-close-btn");
 (function displayBannerInvite() {
     const inviteDays = [1, 2, 3];  // 1=monday, 2=tuesday ...
     let currentDateAndTime = new Date();
-    let currendDay = currentDateAndTime.getDay();
-    // console.log(currendDay);  // for testing purpose
+    let currentDay = currentDateAndTime.getDay();
+    // console.log(currentDay);  // for testing purpose
     inviteDays.forEach((day)=> {
-        if (currendDay == day){
+        if (currentDay == day){
             inviteBanner.style.display = 'block';
         }
     })

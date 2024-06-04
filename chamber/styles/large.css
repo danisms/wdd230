@@ -498,7 +498,7 @@
         border: none;
     }
 
-    footer h3 {
+    footer h3, footer .footer-slogan {
         grid-column: 2/3;
         grid-row: 2/3;
         color: var(--accent-three);

@@ -216,6 +216,7 @@ function displayDirectory(data) {
 
         // display data in directory
         let membersList = data.members;
+        let count = 1;
         membersList.forEach(member => {
             // create elements
             let card = document.createElement('section');
@@ -283,7 +284,10 @@ function displayDirectory(data) {
             // Image
             logoIcon.setAttribute('src', memberLogo);
             logoIcon.setAttribute('alt', `log of ${memberName} hotel`);
-            logoIcon.setAttribute('loading', 'lazy');
+            // avoid largest contentful image lazy loading.
+            if (count > 1) {
+                logoIcon.setAttribute('loading', 'lazy');
+            }
             logoIcon.setAttribute('width', '150');
             logoIcon.setAttribute('height', '150');
 
@@ -307,6 +311,9 @@ function displayDirectory(data) {
 
             directory.appendChild(anchor);
         });
+
+        // increment count
+        count++
 
     } else {
         console.log("empty data");  // for testing purpose
