@@ -231,6 +231,7 @@ function displayDescription(elementId) {
     // delay function for home title intro text writing display to complete
     setTimeout(() => {
         const ele = document.querySelector(`#${elementId}`);
+        
         const paragraph = ele.children[1];
         const text = ele.children[2];
         ele.style.top = 0;
@@ -333,10 +334,8 @@ setTimeout(() => {
     }, 3500);
 }, 3700);
 
-// DYNAMICALLY CREATE COMPANY'S ADVERTS
-const spotlight = document.getElementById('spotlight');
 
-// get json member file
+// GET JSON DATA (member data)
 // api url
 const filepath = 'data/members.json';
 
@@ -347,7 +346,8 @@ async function getData(path)
         if (response.ok) {
             let data = await response.json();
             // console.log(data);  // testing purpose only;
-            displayspotlight(data);
+            displayCurrentEvent(data);
+            displaySpotlight(data);
         } else {
             throw Error(await response.text());
         }
@@ -357,11 +357,153 @@ async function getData(path)
     }
 }
 
-function displayspotlight(data) {
+// DYNAMICALLY CREATE CURRENT EVENT
+/* 
+page structure (Html)
+// Main Div id is scroll-layer-2
+<div class="event-box">
+    <div class="an-event-block" onmouseenter="displayDescription('des1')" onmouseleave="removeDescription('des1', '1000px')">
+        <img src="images/current-events/event-1-placeholder.jpeg" alt="current event one">
+        <section class="event-description" id="des1">
+            <h3>Event One</h3>
+            <p></p>
+            <span>Display Texts</span>
+        </section>
+    </div>
+</div>
+*/
+
+const scrollLayer2 = document.getElementById('scroll-layer-2');
+const emptyCurrentEvent = document.getElementById('empty-current-event');
+
+function displayCurrentEvent(data) {
+    if (data.event.current.length > 0)
+        {
+            // remove/hide empty current event
+            emptyCurrentEvent.style.display = 'none';
+
+            // DISPLAY EVENTS
+            let idCount = 1;
+            const currentEvents = data.event.current;
+            
+            currentEvents.forEach(event => {
+                // Create Elements and Set attributes
+                // eventBox
+                let eventBox = document.createElement('div');
+                eventBox.setAttribute('class', 'event-box');
+                // anEventBlock
+                let anEventBlock = document.createElement('div');
+                anEventBlock.setAttribute('class', 'an-event-block');
+                // anEventBlock.setAttribute('onMouseEnter', `${displayDescription(`des${idCount}`)}`);
+                // anEventBlock.setAttribute('onMouseLeave', `${removeDescription(`des${idCount}`, '1000px')}`);
+
+                // poster
+                let poster = document.createElement('img');
+                poster.setAttribute('src', event.poster);
+                poster.setAttribute('alt', event.title);
+                poster.setAttribute('loading', 'lazy');
+                // poster.setAttribute('width', '400');
+                // poster.setAttribute('height', '400');
+
+                // event description
+                let eventDescription = document.createElement('event-description');
+                eventDescription.setAttribute('class', 'event-description');
+                // eventDescription.setAttribute('id', `des${idCount}`);
+                // eventDescription.id = `des${idCount}`
+                // event description h3 child
+                let h3 = document.createElement('h3');
+                h3.innerHTML = event.title;
+                // event description p child
+                let p = document.createElement('p');
+                // event description span child
+                let span = document.createElement('span');
+                span.innerHTML = event.about
+                // add event description children to event
+                eventDescription.appendChild(h3);
+                eventDescription.appendChild(p);
+                eventDescription.appendChild(span);
+
+                // append children to anEventBlock
+                anEventBlock.appendChild(poster);
+                anEventBlock.appendChild(eventDescription);
+
+                // append child to eventBox
+                eventBox.appendChild(anEventBlock);
+
+                // append eventBox into the main box
+                scrollLayer2.appendChild(eventBox);
+
+                // Add event listeners event to event block
+                // display text
+                anEventBlock.addEventListener('mouseenter', () => {
+                    // displayDescription(`des${idCount}`);
+                    // delay function for home title intro text writing display to complete
+                    setTimeout(() => {
+                        const ele = eventDescription;
+                        const paragraph = p;
+                        const text = span;
+                        ele.style.top = 0;
+                        ele.style.left = 0;
+
+                        // display righting
+                        // console.log(ele.children);  // for testing purpose
+                        // console.log(paragraph);  // for testing purpose
+                        const textValue = text.textContent;
+                        // console.log(textValue);  // for texting purpose;
+                        // call function to display paragraph by letters;
+                        textByLetter(textValue, paragraph, 80);
+                    }, delayFunctionCall);
+                });
+                // remove text
+                anEventBlock.addEventListener('mouseleave', () => {
+                    // removeDescription(`des${idCount}`, '1000px');
+                    const direction = '1000px';
+                    // delay function for intro text writing display to complete
+                    setTimeout(() => {
+                        randomNum = Math.random() * 4
+                    randomNum = Math.ceil(randomNum)
+                    // console.log(randomNum);  // for testing purpose
+                    const ele = eventDescription;
+                    const paragraph = p;
+                    if (randomNum == 1) {
+                        ele.style.top = direction;
+                        // console.log('remove top');  // for testing purpose
+                    }else if (randomNum == 2) {
+                        ele.style.left = `-${direction}`;
+                        // console.log('remove right');
+                    }else if (randomNum == 3) {
+                        ele.style.top = `-${direction}`;;
+                        // console.log('remove bottom');
+                    }else {
+                        ele.style.left = direction;
+                        // console.log('remove left');
+                    }
+
+                    clearInterval(writing);  // for clearing writing interval set by textByLetter function.
+                    // enable all buttons disabled by textByLetter function.
+                    const allBtn = document.querySelectorAll('button')
+                    allBtn.forEach((button)=>{
+                        button.disabled = false;
+                    });
+                }, delayFunctionCall);
+                });
+
+                // increment idCount
+                idCount++;
+            })
+        }
+}
+
+// DYNAMICALLY CREATE COMPANY'S ADVERTS
+const spotlight = document.getElementById('spotlight');
+const emptySpotlight = document.getElementById('empty-spotlight')
+
+function displaySpotlight(data) {
     // console.log(data);  // for testing purpose
     if (data.members.length > 0) {
         // console.log("data not empty");  // for testing purpose
-
+        // remove/hide empty spotlight
+        emptySpotlight.style.display = "none";
         // display data in spotlight
         let membersList = data.members;
         // create a list of members with gold or silver membership
@@ -492,6 +634,9 @@ function displayspotlight(data) {
 
             spotlight.appendChild(anchor);
         });
+    }
+    else {
+        emptySpotlight.style.display = "block";
     }
 }
 

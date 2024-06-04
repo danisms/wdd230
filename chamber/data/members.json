@@ -88,5 +88,42 @@
             "level" : "bronze",
             "description" : "All guest rooms in our hotel are equipped with a flat-screen TV with cable channels. Some units at Morzi Hotel also boast a balcony. Guest rooms at the accommodation have air conditioning and a desk."
         }
-    ]
+    ],
+    "event" : {
+        "current" : [
+            {
+                "title" : "Exclusive Saturday",
+                "date" : "June 22, 2024 - 4pm",
+                "about" : "Join us for \"Sunset Summer Fest\" on June 22, 2024, at 4 PM in Central Park. Enjoy live music, gourmet food, artisanal crafts, and kids’ activities. Relax with cocktails and end the night with a fireworks display. Perfect for friends and family!",
+                "poster" : "images/current-events/event-1-placeholder.webp",
+                "video" : "",
+                "owner" : ""
+            },
+            {
+                "title" : "Grilled Night",
+                "date" : "June 25, 2024 - 4pm",
+                "about" : "Join us for \"Grilled Night\" on June 25, 2024, at 4 PM! Enjoy mouth-watering grilled dishes, live music, and great company. The perfect evening to unwind and savor summer flavors. Location details will be shared upon RSVP. Don't miss out!",
+                "poster" : "images/current-events/event-2-placeholder.webp",
+                "video" : "",
+                "owner" : ""
+            }
+            ,
+            {
+                "title" : "Old School Thursday",
+                "date" : "June 27, 2024 - 4pm",
+                "about" : "Join us for \"Old School Thursday\" on June 27, 2024, at 4 PM! Relive the classics with retro music, vintage games, and nostalgic fun. Location details will be shared upon RSVP. Don't miss this blast from the past!",
+                "poster" : "images/current-events/event-3-placeholder.webp",
+                "video" : "",
+                "owner" : ""
+            },
+            {
+                "title" : "Throw Back Thursday",
+                "date" : "June 29, 2024 - 5pm",
+                "about" : "Join us for \"Throwback Thursday\" on June 29, 2024, at 5 PM! Enjoy retro tunes, classic games, and nostalgic vibes. An evening filled with fun and memories. Location details will be shared upon RSVP. Don't miss the blast from the past!",
+                "poster" : "images/current-events/throw-back.webp",
+                "video" : "",
+                "owner" : ""
+            }
+        ]
+    }
 }
