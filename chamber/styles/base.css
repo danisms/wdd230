@@ -841,9 +841,15 @@ ul {
     }
     header img {
         width: 100%;
-        height: 100vh;
+        height: auto;
         grid-column: 1/2;
         grid-row: 1/2;
+    }
+    #homepage-banner {
+        display: block;
+    }
+    #homepage-video-intro {
+        display: none;
     }
     header #header-overlay {
         width: 100%;

@@ -203,7 +203,7 @@
     /* HEADER */
     header {
         width: 100%;
-        height: 100vh;
+        height: auto;
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 1fr;
@@ -213,14 +213,20 @@
         justify-items: center;
     }
     header img {
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: auto;
         grid-column: 1/2;
         grid-row: 1/2;
     }
+    #homepage-banner {
+        display: none;
+    }
+    #homepage-video-intro {
+        display: block;
+    }
     header #header-overlay {
         width: 100%;
-        height: 100vh;
+        height: auto;
         background-color: var(--primary-color);
         grid-column: 1/2;
         grid-row: 1/2;
@@ -233,7 +239,7 @@
         /* background-color: var(--primary-color); */
         opacity: 0.9;
         position: relative;
-        top: -10vh;
+        /* top: -10vh; */
     }
     #header-intro h1 {
         opacity: 0;
